@@ -48,11 +48,13 @@
 		<Size>350,25</Size>
 		<BgColor>#fafafa</BgColor>
 	</Search>
+
+
 	<TableView>
 		<Pos>6,466</Pos>
 		<Size>1268,330</Size>
 		<BgColor>#111111</BgColor>
-		<FgColor>#151515</FgColor>
+		<FgColor>#cccccc</FgColor>
 		<BgColorRowEven>#222222</BgColorRowEven>
 		<BgColorRowUneven>#333333</BgColorRowUneven>
 	</TableView>
@@ -506,7 +508,7 @@
 		<Tooltip>Pitch control</Tooltip>
 		<Handle>knob_volume.png</Handle>
 		<Slider>slider_pitch.png</Slider>
-		<Pos>470,192</Pos>
+		<Pos>470,180</Pos>
 		<Horizontal>false</Horizontal>
 		<Connection>
 			<ConfigKey>[Channel1],rate</ConfigKey>
@@ -517,7 +519,7 @@
 		<Tooltip>Pitch control</Tooltip>
 		<Handle>knob_volume.png</Handle>
 		<Slider>slider_pitch.png</Slider>
-		<Pos>792,192</Pos>
+		<Pos>792,180</Pos>
 		<Horizontal>false</Horizontal>
 		<Connection>
 			<ConfigKey>[Channel2],rate</ConfigKey>
@@ -959,7 +961,7 @@
 			<Pressed>btn_sync1_over.png</Pressed>
 			<Unpressed>btn_sync.png</Unpressed>
 		</State>
-		<Pos>436,360</Pos>
+		<Pos>436,364</Pos>
 		<Connection>
 			<ConfigKey>[Channel1],beatsync</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -974,7 +976,7 @@
 			<Pressed>btn_sync_over.png</Pressed>
 			<Unpressed>btn_sync.png</Unpressed>
 		</State>
-		<Pos>794,360</Pos>
+		<Pos>794,364</Pos>
 		<Connection>
 			<ConfigKey>[Channel2],beatsync</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -996,7 +998,7 @@
 			<Pressed>btn_pitch_up1_over.png</Pressed>
 			<Unpressed>btn_pitch_up.png</Unpressed>
 		</State>
-		<Pos>436,235</Pos>
+		<Pos>436,220</Pos>
 		<Connection>
 			<ConfigKey>[Channel1],rate_perm_up</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -1016,7 +1018,7 @@
 			<Pressed>btn_pitch_up2_over.png</Pressed>
 			<Unpressed>btn_pitch_up.png</Unpressed>
 		</State>
-		<Pos>820,235</Pos>
+		<Pos>820,220</Pos>
 		<Connection>
 			<ConfigKey>[Channel2],rate_perm_up</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -1037,7 +1039,7 @@
 			<Pressed>btn_pitch_down1_over.png</Pressed>
 			<Unpressed>btn_pitch_down.png</Unpressed>
 		</State>
-		<Pos>436,270</Pos>
+		<Pos>436,260</Pos>
 		<Connection>
 			<ConfigKey>[Channel1],rate_perm_down</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -1057,7 +1059,7 @@
 			<Pressed>btn_pitch_down2_over.png</Pressed>
 			<Unpressed>btn_pitch_down.png</Unpressed>
 		</State>
-		<Pos>820,270</Pos>
+		<Pos>820,260</Pos>
 		<Connection>
 			<ConfigKey>[Channel2],rate_perm_down</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -1083,7 +1085,7 @@
 			<Pressed>btn_nudge_up1_over.png</Pressed>
 			<Unpressed>btn_nudge_up.png</Unpressed>
 		</State>
-		<Pos>436,195</Pos>
+		<Pos>436,186</Pos>
 		<Connection>
 			<ConfigKey>[Channel1],rate_temp_up</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -1113,7 +1115,7 @@
 			<Pressed>btn_nudge_up2_over.png</Pressed>
 			<Unpressed>btn_nudge_up.png</Unpressed>
 		</State>
-		<Pos>820,195</Pos>
+		<Pos>820,186</Pos>
 		<Connection>
 			<ConfigKey>[Channel2],rate_temp_up</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -1144,7 +1146,7 @@
 			<Pressed>btn_nudge_down1_over.png</Pressed>
 			<Unpressed>btn_nudge_down.png</Unpressed>
 		</State>
-		<Pos>436,310</Pos>
+		<Pos>436,294</Pos>
 		<Connection>
 			<ConfigKey>[Channel1],rate_temp_down</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -1174,7 +1176,7 @@
 			<Pressed>btn_nudge_down2_over.png</Pressed>
 			<Unpressed>btn_nudge_down.png</Unpressed>
 		</State>
-		<Pos>820,310</Pos>
+		<Pos>820,294</Pos>
 		<Connection>
 			<ConfigKey>[Channel2],rate_temp_down</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -1199,6 +1201,49 @@
 
 	<!--
 	**********************************************
+	Button - Key lock
+	*********************************************
+	-->
+
+	<PushButton>
+		<Tooltip>Key-lock_ Activates pitch-independent time stretch in the deck.</Tooltip>
+		<NumberStates>2</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_lock.png</Pressed>
+			<Unpressed>btn_lock.png</Unpressed>
+		</State>
+		<State>
+			<Number>1</Number>
+			<Pressed>btn_lock1_over.png</Pressed>
+			<Unpressed>btn_lock1_over.png</Unpressed>
+		</State>
+		<Pos>436,330</Pos>
+		<Connection>
+			<ConfigKey>[Channel1],keylock</ConfigKey>
+		</Connection>
+	</PushButton>
+	<PushButton>
+		<Tooltip>Key-lock: Activates pitch-independent time stretch in the deck.</Tooltip>
+		<NumberStates>2</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_lock.png</Pressed>
+			<Unpressed>btn_lock.png</Unpressed>
+		</State>
+		<State>
+			<Number>1</Number>
+			<Pressed>btn_lock2_over.png</Pressed>
+			<Unpressed>btn_lock2_over.png</Unpressed>
+		</State>
+		<Pos>794,330</Pos>
+		<Connection>
+			<ConfigKey>[Channel2],keylock</ConfigKey>
+		</Connection>
+	</PushButton>
+
+	<!--
+	**********************************************
 	Button- Prelisten / Monitoring
 	**********************************************
 	-->
@@ -1215,7 +1260,7 @@
 			<Pressed>btn_pfl_over.png</Pressed>
 			<Unpressed>btn_pfl1_over.png</Unpressed>
 		</State>
-		<Pos>440,416</Pos>
+		<Pos>436,416</Pos>
 		<Connection>
 			<ConfigKey>[Channel1],pfl</ConfigKey>
 		</Connection>
@@ -1233,7 +1278,7 @@
 			<Pressed>btn_pfl_over.png</Pressed>
 			<Unpressed>btn_pfl2_over.png</Unpressed>
 		</State>
-		<Pos>790,416</Pos>
+		<Pos>794,416</Pos>
 		<Connection>
 			<ConfigKey>[Channel2],pfl</ConfigKey>
 		</Connection>
