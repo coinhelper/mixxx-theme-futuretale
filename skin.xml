@@ -1,21 +1,35 @@
   <!--06 May 2010 14:28:14 CET-->
   <!--
-     FutureTale v0.1, Skin for Mixxx 1.8~beta1
+     FutureTale v0.1, Skin for Mixxx 1.8.x
      www.mixxx.org
 	 Copyright (C) 2010 cadeyrn ; cadeyrn@webportfolio.hu
 
 	 based on LateNightBlues” Skin xml by jus ; jus/justmail/de
 
-     This skin is a free software; you can redistribute it and/or modify
-     it under the terms of the GNU General Public License as published by
-     the Free Software Foundation; either version 2 of the License, or
-     (at your option) any later version.
+    This file is part of the "FutureTale" Skin for Mixxx 1.8.x
+    "FutureTale" is licensed under the Attribution-Noncommercial-Share Alike 3.0 licence.
+    http://creativecommons.org/licenses/by-nc-sa/3.0/us/
+
+	You are free:
+	to Share - to copy, distribute and transmit the work
+	to Remix - to adapt the work
+
+	Under the following conditions:
+	Attribution - You must attribute the work in the manner specified by the author or licensor
+	(but not in any way that suggests that they endorse you or your use of the work).
+	What does "Attribute this work" mean?
+	You must attribute the work in the manner specified by the author or licensor
+	(but not in any way that suggests that they endorse you or your use of the work).
+
+	Noncommercial - You may not use this work for commercial purposes.
+	Share Alike - If you alter, transform, or build upon this work, you may distribute
+	the resulting work only under the same or similar license to this one.
   -->
 
 <!DOCTYPE skin>
 <skin>
 	<Background>
-		<Path>background1280x1024.png</Path>
+		<Path>background1280x800.png</Path>
 		<BgColor>#000000</BgColor>
 	</Background>
 
@@ -30,13 +44,13 @@
 		<BgColor>#fafafa</BgColor>
 	</ComboBox>
 	<Search>
-		<Pos>758,512</Pos>
+		<Pos>758,412</Pos>
 		<Size>350,25</Size>
 		<BgColor>#fafafa</BgColor>
 	</Search>
 	<TableView>
-		<Pos>8,552</Pos>
-		<Size>1264,464</Size>
+		<Pos>6,466</Pos>
+		<Size>1268,330</Size>
 		<BgColor>#111111</BgColor>
 		<FgColor>#151515</FgColor>
 		<BgColorRowEven>#222222</BgColorRowEven>
@@ -59,8 +73,8 @@
 	<Visual>
 		<Tooltip>Drag with mouse to control sound playback. Drop tracks from external file manager here</Tooltip>
 		<Channel>1</Channel>
-		<Pos>241,6</Pos>
-		<Size>798,66</Size>
+		<Pos>185,5</Pos>
+		<Size>906,67</Size>
 		<!--<Pos>6,6</Pos>-->
 		<!--<Size>1268,66</Size>-->
 		<BgColor>#222222</BgColor>
@@ -108,19 +122,13 @@
 			<Color>#FF00FF</Color>
 			<TextColor>#FFFFFF</TextColor>
 		</Mark>
-		<Mark>
-			<Control>hotcue_4_position</Control>
-			<Text>HOTCUE 4</Text>
-			<Align>center</Align>
-			<Color>#009900</Color>
-			<TextColor>#FFFFFF</TextColor>
-		</Mark>
+
 	</Visual>
 	<Visual>
 		<Tooltip>Drag with mouse to control sound playback. Drop tracks from external file manager here</Tooltip>
 		<Channel>2</Channel>
-		<Pos>241,75</Pos>
-		<Size>798,66</Size>
+		<Pos>185,74</Pos>
+		<Size>906,67</Size>
 		<BgColor>#222222</BgColor>
 		<SignalColor>#a2232a</SignalColor>
 		<BeatColor>#dddddd</BeatColor>
@@ -166,13 +174,6 @@
 			<Color>#FF00FF</Color>
 			<TextColor>#FFFFFF</TextColor>
 		</Mark>
-		<Mark>
-			<Control>hotcue_4_position</Control>
-			<Text>HOTCUE 4</Text>
-			<Align>center</Align>
-			<Color>#009900</Color>
-			<TextColor>#FFFFFF</TextColor>
-		</Mark>
 	</Visual>
 
 	<!--
@@ -183,8 +184,8 @@
 	<Overview>
 		<Tooltip>Overview display of waveform</Tooltip>
 		<Channel>1</Channel>
-		<Pos>11,152</Pos>
-		<Size>488,47</Size>
+		<Pos>10,152</Pos>
+		<Size>400,48</Size>
 		<BgColor>#333333</BgColor>
 		<SignalColor>#455282</SignalColor>
 		<MarkerColor>#ffffff</MarkerColor>
@@ -196,8 +197,8 @@
 	<Overview>
 		<Tooltip>Overview display of waveform</Tooltip>
 		<Channel>2</Channel>
-		<Pos>781,152</Pos>
-		<Size>488,47</Size>
+		<Pos>870,152</Pos>
+		<Size>400,48</Size>
 		<BgColor>#333333</BgColor>
 		<SignalColor>#a2232a</SignalColor>
 		<MarkerColor>#ffffff</MarkerColor>
@@ -215,12 +216,10 @@
 
 	<VuMeter>
 		<Tooltip>Channel[1] output volume display</Tooltip>
-		<PathVu>btn_volumeh_display_over.png</PathVu>
-		<PathBack>btn_volumeh_display.png</PathBack>
-		<Pos>340,250</Pos>
-		<Horizontal>true</Horizontal>
-		<PeakHoldSize>5</PeakHoldSize>
-		<PeakHoldTime>200</PeakHoldTime>
+		<PathVu>btn_volume_display_over.png</PathVu>
+		<PathBack>btn_volume_display.png</PathBack>
+		<Pos>516,190</Pos>
+		<Horizontal>false</Horizontal>
 		<Connection>
 			<ConfigKey>[Channel1],VuMeter</ConfigKey>
 		</Connection>
@@ -228,12 +227,10 @@
 
 	<VuMeter>
 		<Tooltip>Channel[2] output volume display</Tooltip>
-		<PathVu>btn_volumeh_display_over.png</PathVu>
-		<PathBack>btn_volumeh_display.png</PathBack>
-		<Pos>800,250</Pos>
-		<Horizontal>true</Horizontal>
-		<PeakHoldSize>5</PeakHoldSize>
-		<PeakHoldTime>200</PeakHoldTime>
+		<PathVu>btn_volume_display_over.png</PathVu>
+		<PathBack>btn_volume_display.png</PathBack>
+		<Pos>748,190</Pos>
+		<Horizontal>false</Horizontal>
 		<Connection>
 			<ConfigKey>[Channel2],VuMeter</ConfigKey>
 		</Connection>
@@ -241,24 +238,20 @@
 
 	<VuMeter>
 		<Tooltip>Master output volume display, L</Tooltip>
-		<PathVu>btn_volume_display_over.png</PathVu>
-		<PathBack>btn_volume_display.png</PathBack>
-		<Pos>516,190</Pos>
+		<PathVu>btn_volumeh_display_over.png</PathVu>
+		<PathBack>btn_volumeh_display.png</PathBack>
+		<Pos>1166,30</Pos>
 		<Horizontal>false</Horizontal>
-		<PeakHoldSize>5</PeakHoldSize>
-		<PeakHoldTime>200</PeakHoldTime>
 		<Connection>
 			<ConfigKey>[Master],VuMeterL</ConfigKey>
 		</Connection>
 	</VuMeter>
 	<VuMeter>
 		<Tooltip>Master output volume display, R</Tooltip>
-		<PathVu>btn_volume_display_over.png</PathVu>
-		<PathBack>btn_volume_display.png</PathBack>
-		<Pos>748,190</Pos>
+		<PathVu>btn_volumeh_display_over.png</PathVu>
+		<PathBack>btn_volumeh_display.png</PathBack>
+		<Pos>1186,30</Pos>
 		<Horizontal>false</Horizontal>
-		<PeakHoldSize>5</PeakHoldSize>
-		<PeakHoldTime>200</PeakHoldTime>
 		<Connection>
 			<ConfigKey>[Master],VuMeterR</ConfigKey>
 		</Connection>
@@ -273,7 +266,7 @@
 	    <Tooltip>Peak Indicator</Tooltip>
 		<PathStatusLight>btn_kill_over.png</PathStatusLight>
 		<PathBack>btn_kill.png</PathBack>
-		<Pos>480,253</Pos>
+		<Pos>519,180</Pos>
 		<Connection>
 			<ConfigKey>[Channel1],PeakIndicator</ConfigKey>
 		</Connection>
@@ -282,17 +275,19 @@
 		<Tooltip>Peak Indicator</Tooltip>
 		<PathStatusLight>btn_kill_over.png</PathStatusLight>
 		<PathBack>btn_kill.png</PathBack>
-		<Pos>940,253</Pos>
+		<Pos>751,180</Pos>
 		<Connection>
 			<ConfigKey>[Channel2],PeakIndicator</ConfigKey>
 		</Connection>
 	</StatusLight>
 
+
+
 	<StatusLight>
 		<Tooltip>Peak Indicator</Tooltip>
 		<PathStatusLight>btn_kill_over.png</PathStatusLight>
 		<PathBack>btn_kill.png</PathBack>
-		<Pos>519,180</Pos>
+		<Pos>1156,30</Pos>
 		<Connection>
 			<ConfigKey>[Master],PeakIndicator</ConfigKey>
 		</Connection>
@@ -301,7 +296,7 @@
 		<Tooltip>Peak Indicator</Tooltip>
 		<PathStatusLight>btn_kill_over.png</PathStatusLight>
 		<PathBack>btn_kill.png</PathBack>
-		<Pos>751,180</Pos>
+		<Pos>1202,30</Pos>
 		<Connection>
 			<ConfigKey>[Master],PeakIndicator</ConfigKey>
 		</Connection>
@@ -323,23 +318,23 @@
 	<Text>
 		<Tooltip>Track information display</Tooltip>
 		<Channel>1</Channel>
-		<Pos>12,210</Pos>
-		<Size>488,20</Size>
+		<Pos>14,210</Pos>
+		<Size>340,20</Size>
 		<FontSize>13</FontSize>
 		<Alignment>left</Alignment>
 		<Style>font: bold 14px/16px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
-		background-color: transparent; color: #999999; text-align: left; padding-left: 1%;
+		background-color: transparent; color: #999999; text-align: left;
 		</Style>
 	</Text>
 	<Text>
 		<Tooltip>Track information display</Tooltip>
 		<Channel>2</Channel>
-		<Pos>780,210</Pos>
-		<Size>488,20</Size>
+		<Pos>874,210</Pos>
+		<Size>340,20</Size>
 		<FontSize>13</FontSize>
-		<Alignment>right</Alignment>
+		<Alignment>left</Alignment>
 		<Style>font: bold 14px/16px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
-		background-color: transparent; color: #999999; text-align: left; padding-left: 1%;
+		background-color: transparent; color: #999999; text-align: left;
 		</Style>
 	</Text>
 
@@ -351,13 +346,13 @@
 	<NumberBpm>
 		<Tooltip>Tempo display (BPM=Beat Per Minute)</Tooltip>
 		<Channel>1</Channel>
-		<Pos>12, 250</Pos>
+		<Pos>14, 250</Pos>
 		<Size>110,20</Size>
 		<FontSize>12</FontSize>
 		<Alignment>left</Alignment>
 		<NumberOfDigits>6</NumberOfDigits>
 		<Style>font: bold 14px/16px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
-		background-color: transparent; color: #999999; text-align: left; padding-left: 1%;
+		background-color: transparent; color: #999999; text-align: left;
 		</Style>
 		<Connection>
 			<ConfigKey>[Channel1],bpm</ConfigKey>
@@ -366,13 +361,13 @@
 	<NumberBpm>
 		<Tooltip>Tempo display (BPM=Beat Per Minute)</Tooltip>
 		<Channel>2</Channel>
-		<Pos>1158,250</Pos>
+		<Pos>874,250</Pos>
 		<Size>110,20</Size>
 		<FontSize>12</FontSize>
-		<Alignment>right</Alignment>
+		<Alignment>left</Alignment>
 		<NumberOfDigits>6</NumberOfDigits>
 		<Style>font: bold 14px/16px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
-		background-color: transparent; color: #999999; text-align: left; padding-left: 1%;
+		background-color: transparent; color: #999999; text-align: left;
 		</Style>
 		<Connection>
 			<ConfigKey>[Channel2],bpm</ConfigKey>
@@ -387,13 +382,13 @@
 	<NumberPos>
 		<Tooltip>Play position/remaining time</Tooltip>
 		<Channel>1</Channel>
-		<Pos>142,250</Pos>
-		<Size>180,20</Size>
+		<Pos>200,250</Pos>
+		<Size>200,20</Size>
 		<FontSize>12</FontSize>
-		<Alignment>left</Alignment>
+		<Alignment>right</Alignment>
 		<NumberOfDigits>6</NumberOfDigits>
 		<Style>font: bold 14px/16px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
-		background-color: transparent; color: #bbbbbb; text-align: left; padding-left: 1%;
+		background-color:transparent; color: #bbbbbb;
 		</Style>
 		<Connection>
 			<ConfigKey>[Channel1],playposition</ConfigKey>
@@ -402,13 +397,13 @@
 	<NumberPos>
 		<Tooltip>Play position/remaining time</Tooltip>
 		<Channel>2</Channel>
-		<Pos>958,250</Pos>
-		<Size>180,20</Size>
+		<Pos>1060,250</Pos>
+		<Size>200,20</Size>
 		<FontSize>12</FontSize>
 		<NumberOfDigits>6</NumberOfDigits>
-		<Alignment>left</Alignment>
+		<Alignment>right</Alignment>
 		<Style>font: bold 14px/16px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
-		background-color: transparent; color: #bbbbbb; text-align: left; padding-left: 1%;
+		background-color:transparent; color: #bbbbbb;
 		</Style>
 		<Connection>
 			<ConfigKey>[Channel2],playposition</ConfigKey>
@@ -423,10 +418,11 @@
 	<NumberRate>
 		<Tooltip>Pitch rate display</Tooltip>
 		<Channel>1</Channel>
-		<Pos>450,306</Pos>
+		<Pos>444,162</Pos>
 		<Size>60,20</Size>
 		<FontSize>10</FontSize>
 		<Alignment>left</Alignment>
+		<Style>font: bold 12px/14px Lucida Console, Courier New, Courier, monotype; background-color: transparent; color: #bbbbbb; text-align: left;</Style>
 		<NumberOfDigits>3</NumberOfDigits>
 		<FgColor>#cccccc</FgColor>
 		<Connection>
@@ -436,10 +432,11 @@
 	<NumberRate>
 		<Tooltip>Pitch rate display</Tooltip>
 		<Channel>2</Channel>
-		<Pos>790,306</Pos>
+		<Pos>806,162</Pos>
 		<Size>60,20</Size>
 		<FontSize>10</FontSize>
 		<Alignment>left</Alignment>
+		<Style>font: bold 12px/14px Lucida Console, Courier New, Courier, monotype; background-color: transparent; color: #bbbbbb; text-align: left;</Style>
 		<NumberOfDigits>3</NumberOfDigits>
 		<FgColor>#cccccc</FgColor>
 		<Connection>
@@ -464,7 +461,7 @@
 		<Tooltip>Channel 1 volume control</Tooltip>
 		<Handle>knob_volume.png</Handle>
 		<Slider>slider_volume.png</Slider>
-		<Pos>604,300</Pos>
+		<Pos>604,216</Pos>
 		<Horizontal>false</Horizontal>
 		<Connection>
 			<ConfigKey>[Channel1],volume</ConfigKey>
@@ -475,7 +472,7 @@
 		<Tooltip>Channel 2 volume control</Tooltip>
 		<Handle>knob_volume.png</Handle>
 		<Slider>slider_volume.png</Slider>
-		<Pos>664,300</Pos>
+		<Pos>662,216</Pos>
 		<Horizontal>false</Horizontal>
 		<Connection>
 			<ConfigKey>[Channel2],volume</ConfigKey>
@@ -492,7 +489,7 @@
 		<Tooltip>Crossfader</Tooltip>
 		<Handle>knob_crossfader.png</Handle>
 		<Slider>slider_crossfader.png</Slider>
-		<Pos>537,486</Pos>
+		<Pos>537,406</Pos>
 		<Horizontal>true</Horizontal>
 		<Connection>
 			<ConfigKey>[Master],crossfader</ConfigKey>
@@ -509,7 +506,7 @@
 		<Tooltip>Pitch control</Tooltip>
 		<Handle>knob_volume.png</Handle>
 		<Slider>slider_pitch.png</Slider>
-		<Pos>476,328</Pos>
+		<Pos>470,192</Pos>
 		<Horizontal>false</Horizontal>
 		<Connection>
 			<ConfigKey>[Channel1],rate</ConfigKey>
@@ -520,7 +517,7 @@
 		<Tooltip>Pitch control</Tooltip>
 		<Handle>knob_volume.png</Handle>
 		<Slider>slider_pitch.png</Slider>
-		<Pos>788,328</Pos>
+		<Pos>792,192</Pos>
 		<Horizontal>false</Horizontal>
 		<Connection>
 			<ConfigKey>[Channel2],rate</ConfigKey>
@@ -554,7 +551,7 @@
 			<Pressed>btn_play1_over.png</Pressed>
 			<Unpressed>btn_play1_over.png</Unpressed>
 		</State>
-		<Pos>300,320</Pos>
+		<Pos>304,286</Pos>
 		<Connection>
 			<ConfigKey>[Channel1],play</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -579,7 +576,7 @@
 			<Pressed>btn_play2_over.png</Pressed>
 			<Unpressed>btn_play2_over.png</Unpressed>
 		</State>
-		<Pos>870,320</Pos>
+		<Pos>876,286</Pos>
 		<Connection>
 			<ConfigKey>[Channel2],play</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -605,7 +602,7 @@
             <Pressed>btn_cue1_over.png</Pressed>
             <Unpressed>btn_cue.png</Unpressed>
         </State>
-        <Pos>357,400</Pos>
+        <Pos>144,295</Pos>
         <Connection>
             <ConfigKey>[Channel1],cue_default</ConfigKey>
             <EmitOnDownPress>true</EmitOnDownPress>
@@ -625,7 +622,7 @@
             <Pressed>btn_cue2_over.png</Pressed>
             <Unpressed>btn_cue.png</Unpressed>
         </State>
-        <Pos>927,400</Pos>
+        <Pos>1086,295</Pos>
         <Connection>
             <ConfigKey>[Channel2],cue_default</ConfigKey>
             <EmitOnDownPress>true</EmitOnDownPress>
@@ -652,7 +649,7 @@
             <Pressed>btn_hotcue11_over.png</Pressed>
             <Unpressed>btn_hotcue1.png</Unpressed>
         </State>
-        <Pos>300,490</Pos>
+        <Pos>228,416</Pos>
         <Connection>
             <ConfigKey>[Channel1],hotcue_1_activate</ConfigKey>
             <EmitOnDownPress>true</EmitOnDownPress>
@@ -677,7 +674,7 @@
             <Pressed>btn_hotcue21_over.png</Pressed>
             <Unpressed>btn_hotcue2.png</Unpressed>
         </State>
-        <Pos>328,490</Pos>
+        <Pos>288,416</Pos>
         <Connection>
             <ConfigKey>[Channel1],hotcue_2_activate</ConfigKey>
             <EmitOnDownPress>true</EmitOnDownPress>
@@ -702,7 +699,7 @@
             <Pressed>btn_hotcue31_over.png</Pressed>
             <Unpressed>btn_hotcue3.png</Unpressed>
         </State>
-        <Pos>357,490</Pos>
+        <Pos>348,416</Pos>
         <Connection>
             <ConfigKey>[Channel1],hotcue_3_activate</ConfigKey>
             <EmitOnDownPress>true</EmitOnDownPress>
@@ -719,31 +716,6 @@
             <ButtonState>RightButton</ButtonState>
         </Connection>
     </PushButton>
-    <PushButton>
-        <Tooltip>Set and activate Hotcue, delete Hotcue (right-click)</Tooltip>
-        <NumberStates>1</NumberStates>
-        <State>
-            <Number>0</Number>
-            <Pressed>btn_hotcue41_over.png</Pressed>
-            <Unpressed>btn_hotcue4.png</Unpressed>
-        </State>
-        <Pos>385,490</Pos>
-        <Connection>
-            <ConfigKey>[Channel1],hotcue_4_activate</ConfigKey>
-            <EmitOnDownPress>true</EmitOnDownPress>
-            <ButtonState>LeftButton</ButtonState>
-        </Connection>
-        <Connection>
-            <ConfigKey>[Channel1],hotcue_4_activate</ConfigKey>
-            <EmitOnDownPress>false</EmitOnDownPress>
-            <ButtonState>LeftButton</ButtonState>
-        </Connection>
-        <Connection>
-            <ConfigKey>[Channel1],hotcue_4_clear</ConfigKey>
-            <EmitOnDownPress>true</EmitOnDownPress>
-            <ButtonState>RightButton</ButtonState>
-        </Connection>
-    </PushButton>
 
     <PushButton>
         <Tooltip>Set and activate Hotcue, delete Hotcue (right-click)</Tooltip>
@@ -753,7 +725,7 @@
             <Pressed>btn_hotcue12_over.png</Pressed>
             <Unpressed>btn_hotcue1.png</Unpressed>
         </State>
-        <Pos>870,490</Pos>
+        <Pos>882,416</Pos>
         <Connection>
             <ConfigKey>[Channel2],hotcue_1_activate</ConfigKey>
             <EmitOnDownPress>true</EmitOnDownPress>
@@ -778,7 +750,7 @@
             <Pressed>btn_hotcue22_over.png</Pressed>
             <Unpressed>btn_hotcue2.png</Unpressed>
         </State>
-        <Pos>898,490</Pos>
+        <Pos>942,416</Pos>
         <Connection>
             <ConfigKey>[Channel2],hotcue_2_activate</ConfigKey>
             <EmitOnDownPress>true</EmitOnDownPress>
@@ -803,7 +775,7 @@
             <Pressed>btn_hotcue32_over.png</Pressed>
             <Unpressed>btn_hotcue3.png</Unpressed>
         </State>
-        <Pos>927,490</Pos>
+        <Pos>1002,416</Pos>
         <Connection>
             <ConfigKey>[Channel2],hotcue_3_activate</ConfigKey>
             <EmitOnDownPress>true</EmitOnDownPress>
@@ -816,31 +788,6 @@
         </Connection>
         <Connection>
             <ConfigKey>[Channel2],hotcue_3_clear</ConfigKey>
-            <EmitOnDownPress>true</EmitOnDownPress>
-            <ButtonState>RightButton</ButtonState>
-        </Connection>
-    </PushButton>
-    <PushButton>
-        <Tooltip>Set and activate Hotcue, delete Hotcue (right-click)</Tooltip>
-        <NumberStates>1</NumberStates>
-        <State>
-            <Number>0</Number>
-            <Pressed>btn_hotcue42_over.png</Pressed>
-            <Unpressed>btn_hotcue4.png</Unpressed>
-        </State>
-        <Pos>955,490</Pos>
-        <Connection>
-            <ConfigKey>[Channel2],hotcue_4_activate</ConfigKey>
-            <EmitOnDownPress>true</EmitOnDownPress>
-            <ButtonState>LeftButton</ButtonState>
-        </Connection>
-        <Connection>
-            <ConfigKey>[Channel2],hotcue_4_activate</ConfigKey>
-            <EmitOnDownPress>false</EmitOnDownPress>
-            <ButtonState>LeftButton</ButtonState>
-        </Connection>
-        <Connection>
-            <ConfigKey>[Channel2],hotcue_4_clear</ConfigKey>
             <EmitOnDownPress>true</EmitOnDownPress>
             <ButtonState>RightButton</ButtonState>
         </Connection>
@@ -859,12 +806,12 @@
 			<Pressed>btn_back1_over.png</Pressed>
 			<Unpressed>btn_back.png</Unpressed>
 		</State>
-		<Pos>300,400</Pos>
+		<Pos>214,295</Pos>
 		<Connection>
 			<ConfigKey>[Channel1],reverse</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
 			<ButtonState>LeftButton</ButtonState>
-		</Connection>
+		</Connection>1086
 		<Connection>
 			<ConfigKey>[Channel1],reverse</ConfigKey>
 			<EmitOnDownPress>false</EmitOnDownPress>
@@ -879,7 +826,7 @@
 			<Pressed>btn_back2_over.png</Pressed>
 			<Unpressed>btn_back.png</Unpressed>
 		</State>
-		<Pos>870,400</Pos>
+		<Pos>1016,295</Pos>
 		<Connection>
 			<ConfigKey>[Channel2],reverse</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -905,7 +852,7 @@
 			<Pressed>btn_forward1_over.png</Pressed>
 			<Unpressed>btn_forward.png</Unpressed>
 		</State>
-		<Pos>357,433</Pos>
+		<Pos>74,295</Pos>
 		<Connection>
 			<ConfigKey>[Channel1],fwd</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -930,7 +877,7 @@
 			<Pressed>btn_rewind1_over.png</Pressed>
 			<Unpressed>btn_rewind.png</Unpressed>
 		</State>
-		<Pos>300,433</Pos>
+		<Pos>24,295</Pos>
 		<Connection>
 			<ConfigKey>[Channel1],back</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -956,12 +903,12 @@
 			<Pressed>btn_forward2_over.png</Pressed>
 			<Unpressed>btn_forward.png</Unpressed>
 		</State>
-		<Pos>927,433</Pos>
+		<Pos>1206,295</Pos>
 		<Connection>
 			<ConfigKey>[Channel2],fwd</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
 			<ButtonState>LeftButton</ButtonState>
-		</Connection>
+		</Connection>1016
 		<Connection>
 			<ConfigKey>[Channel2],fwd</ConfigKey>
 			<EmitOnDownPress>false</EmitOnDownPress>
@@ -981,7 +928,7 @@
 			<Pressed>btn_rewind2_over.png</Pressed>
 			<Unpressed>btn_rewind.png</Unpressed>
 		</State>
-		<Pos>870,433</Pos>
+		<Pos>1156,295</Pos>
 		<Connection>
 			<ConfigKey>[Channel2],back</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -1009,10 +956,10 @@
 		<NumberStates>1</NumberStates>
 		<State>
 			<Number>0</Number>
-			<Pressed>btn_sync_over.png</Pressed>
+			<Pressed>btn_sync1_over.png</Pressed>
 			<Unpressed>btn_sync.png</Unpressed>
 		</State>
-		<Pos>442,490</Pos>
+		<Pos>436,360</Pos>
 		<Connection>
 			<ConfigKey>[Channel1],beatsync</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -1027,7 +974,7 @@
 			<Pressed>btn_sync_over.png</Pressed>
 			<Unpressed>btn_sync.png</Unpressed>
 		</State>
-		<Pos>790,490</Pos>
+		<Pos>794,360</Pos>
 		<Connection>
 			<ConfigKey>[Channel2],beatsync</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -1046,10 +993,10 @@
 		<NumberStates>1</NumberStates>
 		<State>
 			<Number>0</Number>
-			<Pressed>btn_pitch_up_over.png</Pressed>
+			<Pressed>btn_pitch_up1_over.png</Pressed>
 			<Unpressed>btn_pitch_up.png</Unpressed>
 		</State>
-		<Pos>440,374</Pos>
+		<Pos>436,235</Pos>
 		<Connection>
 			<ConfigKey>[Channel1],rate_perm_up</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -1066,10 +1013,10 @@
 		<NumberStates>1</NumberStates>
 		<State>
 			<Number>0</Number>
-			<Pressed>btn_pitch_up_over.png</Pressed>
+			<Pressed>btn_pitch_up2_over.png</Pressed>
 			<Unpressed>btn_pitch_up.png</Unpressed>
 		</State>
-		<Pos>820,374</Pos>
+		<Pos>820,235</Pos>
 		<Connection>
 			<ConfigKey>[Channel2],rate_perm_up</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -1087,10 +1034,10 @@
 		<NumberStates>1</NumberStates>
 		<State>
 			<Number>0</Number>
-			<Pressed>btn_pitch_down_over.png</Pressed>
+			<Pressed>btn_pitch_down1_over.png</Pressed>
 			<Unpressed>btn_pitch_down.png</Unpressed>
 		</State>
-		<Pos>440,404</Pos>
+		<Pos>436,270</Pos>
 		<Connection>
 			<ConfigKey>[Channel1],rate_perm_down</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -1107,10 +1054,10 @@
 		<NumberStates>1</NumberStates>
 		<State>
 			<Number>0</Number>
-			<Pressed>btn_pitch_down_over.png</Pressed>
+			<Pressed>btn_pitch_down2_over.png</Pressed>
 			<Unpressed>btn_pitch_down.png</Unpressed>
 		</State>
-		<Pos>820,404</Pos>
+		<Pos>820,270</Pos>
 		<Connection>
 			<ConfigKey>[Channel2],rate_perm_down</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -1133,10 +1080,10 @@
 		<NumberStates>1</NumberStates>
 		<State>
 			<Number>0</Number>
-			<Pressed>btn_nudge_up_over.png</Pressed>
+			<Pressed>btn_nudge_up1_over.png</Pressed>
 			<Unpressed>btn_nudge_up.png</Unpressed>
 		</State>
-		<Pos>440,335</Pos>
+		<Pos>436,195</Pos>
 		<Connection>
 			<ConfigKey>[Channel1],rate_temp_up</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -1163,10 +1110,10 @@
 		<NumberStates>1</NumberStates>
 		<State>
 			<Number>0</Number>
-			<Pressed>btn_nudge_up_over.png</Pressed>
+			<Pressed>btn_nudge_up2_over.png</Pressed>
 			<Unpressed>btn_nudge_up.png</Unpressed>
 		</State>
-		<Pos>820,335</Pos>
+		<Pos>820,195</Pos>
 		<Connection>
 			<ConfigKey>[Channel2],rate_temp_up</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -1194,10 +1141,10 @@
 		<NumberStates>1</NumberStates>
 		<State>
 			<Number>0</Number>
-			<Pressed>btn_nudge_down_over.png</Pressed>
+			<Pressed>btn_nudge_down1_over.png</Pressed>
 			<Unpressed>btn_nudge_down.png</Unpressed>
 		</State>
-		<Pos>440,442</Pos>
+		<Pos>436,310</Pos>
 		<Connection>
 			<ConfigKey>[Channel1],rate_temp_down</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -1224,10 +1171,10 @@
 		<NumberStates>1</NumberStates>
 		<State>
 			<Number>0</Number>
-			<Pressed>btn_nudge_down_over.png</Pressed>
+			<Pressed>btn_nudge_down2_over.png</Pressed>
 			<Unpressed>btn_nudge_down.png</Unpressed>
 		</State>
-		<Pos>820,442</Pos>
+		<Pos>820,310</Pos>
 		<Connection>
 			<ConfigKey>[Channel2],rate_temp_down</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -1268,7 +1215,7 @@
 			<Pressed>btn_pfl_over.png</Pressed>
 			<Unpressed>btn_pfl1_over.png</Unpressed>
 		</State>
-		<Pos>524,430</Pos>
+		<Pos>440,416</Pos>
 		<Connection>
 			<ConfigKey>[Channel1],pfl</ConfigKey>
 		</Connection>
@@ -1286,7 +1233,7 @@
 			<Pressed>btn_pfl_over.png</Pressed>
 			<Unpressed>btn_pfl2_over.png</Unpressed>
 		</State>
-		<Pos>714,430</Pos>
+		<Pos>790,416</Pos>
 		<Connection>
 			<ConfigKey>[Channel2],pfl</ConfigKey>
 		</Connection>
@@ -1315,7 +1262,7 @@
 			<Pressed>btn_trackmode_loop.png</Pressed>
 			<Unpressed>btn_trackmode_loop.png</Unpressed>
 		</State>
-		<Pos>460,208</Pos>
+		<Pos>375,208</Pos>
 		<Connection>
 			<ConfigKey>[Channel1],TrackEndMode</ConfigKey>
 		</Connection>
@@ -1338,7 +1285,7 @@
 			<Pressed>btn_trackmode_loop.png</Pressed>
 			<Unpressed>btn_trackmode_loop.png</Unpressed>
 		</State>
-		<Pos>1230,208</Pos>
+		<Pos>1236,208</Pos>
 		<Connection>
 			<ConfigKey>[Channel2],TrackEndMode</ConfigKey>
 		</Connection>
@@ -1362,7 +1309,7 @@
 			<Pressed>btn_fx1_over.png</Pressed>
 			<Unpressed>btn_fx1_over.png</Unpressed>
 		</State>
-		<Pos>80,440</Pos>
+		<Pos>80,360</Pos>
 		<Connection>
 			<ConfigKey>[Channel1],flanger</ConfigKey>
 		</Connection>
@@ -1380,7 +1327,7 @@
 			<Pressed>btn_fx2_over.png</Pressed>
 			<Unpressed>btn_fx2_over.png</Unpressed>
 		</State>
-		<Pos>1140,440</Pos>
+		<Pos>1150,360</Pos>
 		<Connection>
 			<ConfigKey>[Channel2],flanger</ConfigKey>
 		</Connection>
@@ -1404,7 +1351,7 @@
 			<Pressed>btn_kill.png</Pressed>
 			<Unpressed>btn_kill_over.png</Unpressed>
 		</State>
-		<Pos>566,286</Pos>
+		<Pos>566,236</Pos>
 		<Connection>
 			<ConfigKey>[Channel1],filterHighKill</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -1424,7 +1371,7 @@
 			<Pressed>btn_kill.png</Pressed>
 			<Unpressed>btn_kill_over.png</Unpressed>
 		</State>
-		<Pos>566,342</Pos>
+		<Pos>566,292</Pos>
 		<Connection>
 			<ConfigKey>[Channel1],filterMidKill</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -1444,7 +1391,7 @@
 			<Pressed>btn_kill.png</Pressed>
 			<Unpressed>btn_kill_over.png</Unpressed>
 		</State>
-		<Pos>566,394</Pos>
+		<Pos>566,344</Pos>
 		<Connection>
 			<ConfigKey>[Channel1],filterLowKill</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -1465,7 +1412,7 @@
 			<Pressed>btn_kill.png</Pressed>
 			<Unpressed>btn_kill_over.png</Unpressed>
 		</State>
-		<Pos>706,286</Pos>
+		<Pos>706,236</Pos>
 		<Connection>
 			<ConfigKey>[Channel2],filterHighKill</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -1485,7 +1432,7 @@
 			<Pressed>btn_kill.png</Pressed>
 			<Unpressed>btn_kill_over.png</Unpressed>
 		</State>
-		<Pos>706,342</Pos>
+		<Pos>706,292</Pos>
 		<Connection>
 			<ConfigKey>[Channel2],filterMidKill</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -1505,7 +1452,7 @@
 			<Pressed>btn_kill.png</Pressed>
 			<Unpressed>btn_kill_over.png</Unpressed>
 		</State>
-		<Pos>706,394</Pos>
+		<Pos>706,344</Pos>
 		<Connection>
 			<ConfigKey>[Channel2],filterLowKill</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -1526,7 +1473,7 @@
 			<Pressed>btn_loop_in1_over.png</Pressed>
 			<Unpressed>btn_loop_in.png</Unpressed>
 		</State>
-		<Pos>20,330</Pos>
+		<Pos>228,360</Pos>
 		<Connection>
 			<ConfigKey>[Channel1],loop_in</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -1546,7 +1493,7 @@
 			<Pressed>btn_loop_out1_over.png</Pressed>
 			<Unpressed>btn_loop_out.png</Unpressed>
 		</State>
-		<Pos>80,330</Pos>
+		<Pos>288,360</Pos>
 		<Connection>
 			<ConfigKey>[Channel1],loop_out</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -1566,7 +1513,7 @@
 			<Pressed>btn_loop_reloop1_over.png</Pressed>
 			<Unpressed>btn_loop_reloop.png</Unpressed>
 		</State>
-		<Pos>140,330</Pos>
+		<Pos>348,360</Pos>
 		<Connection>
 			<ConfigKey>[Channel1],reloop_exit</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -1587,7 +1534,7 @@
 			<Pressed>btn_loop_in2_over.png</Pressed>
 			<Unpressed>btn_loop_in.png</Unpressed>
 		</State>
-		<Pos>1090,330</Pos>
+		<Pos>882,360</Pos>
 		<Connection>
 			<ConfigKey>[Channel2],loop_in</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -1607,7 +1554,7 @@
 			<Pressed>btn_loop_out2_over.png</Pressed>
 			<Unpressed>btn_loop_out.png</Unpressed>
 		</State>
-		<Pos>1150,330</Pos>
+		<Pos>942,360</Pos>
 		<Connection>
 			<ConfigKey>[Channel2],loop_out</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -1627,7 +1574,7 @@
 			<Pressed>btn_loop_reloop2_over.png</Pressed>
 			<Unpressed>btn_loop_reloop.png</Unpressed>
 		</State>
-		<Pos>1210,330</Pos>
+		<Pos>1002,360</Pos>
 		<Connection>
 			<ConfigKey>[Channel2],reloop_exit</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -1658,7 +1605,7 @@
 		<Tooltip>Master volume control</Tooltip>
 		<NumberStates>29</NumberStates>
 		<Path>knob_rotate_%1.png</Path>
-		<Pos>594,174</Pos>
+		<Pos>1122,80</Pos>
 		<Connection>
 			<ConfigKey>[Master],volume</ConfigKey>
 		</Connection>
@@ -1667,7 +1614,7 @@
 		<Tooltip>Master balance control</Tooltip>
 		<NumberStates>29</NumberStates>
 		<Path>knob_rotate_%1.png</Path>
-		<Pos>656,174</Pos>
+		<Pos>1210,80</Pos>
 		<Connection>
 			<ConfigKey>[Master],balance</ConfigKey>
 		</Connection>
@@ -1683,7 +1630,7 @@
 		<Tooltip>Flanger delay control</Tooltip>
 		<NumberStates>29</NumberStates>
 		<Path>knob_rotate_%1.png</Path>
-		<Pos>150,508</Pos>
+		<Pos>156,402</Pos>
 		<Connection>
 			<ConfigKey>[Flanger],lfoDelay</ConfigKey>
 		</Connection>
@@ -1692,7 +1639,7 @@
 		<Tooltip>Flanger depth control</Tooltip>
 		<NumberStates>29</NumberStates>
 		<Path>knob_rotate_%1.png</Path>
-		<Pos>88,508</Pos>
+		<Pos>90,402</Pos>
 		<Connection>
 			<ConfigKey>[Flanger],lfoDepth</ConfigKey>
 		</Connection>
@@ -1701,7 +1648,7 @@
 		<Tooltip>Flanger period control</Tooltip>
 		<NumberStates>29</NumberStates>
 		<Path>knob_rotate_%1.png</Path>
-		<Pos>25,508</Pos>
+		<Pos>25,402</Pos>
 		<Connection>
 			<ConfigKey>[Flanger],lfoPeriod</ConfigKey>
 		</Connection>
@@ -1716,7 +1663,7 @@
 		<Tooltip>Flanger delay control</Tooltip>
 		<NumberStates>29</NumberStates>
 		<Path>knob_rotate_%1.png</Path>
-		<Pos>1216,508</Pos>
+		<Pos>1221,402</Pos>
 		<Connection>
 			<ConfigKey>[Flanger],lfoDelay</ConfigKey>
 		</Connection>
@@ -1725,7 +1672,7 @@
 		<Tooltip>Flanger depth control</Tooltip>
 		<NumberStates>29</NumberStates>
 		<Path>knob_rotate_%1.png</Path>
-		<Pos>1150,508</Pos>
+		<Pos>1156,402</Pos>
 		<Connection>
 			<ConfigKey>[Flanger],lfoDepth</ConfigKey>
 		</Connection>
@@ -1734,7 +1681,7 @@
 		<Tooltip>Flanger period control</Tooltip>
 		<NumberStates>29</NumberStates>
 		<Path>knob_rotate_%1.png</Path>
-		<Pos>1090,508</Pos>
+		<Pos>1090,402</Pos>
 		<Connection>
 			<ConfigKey>[Flanger],lfoPeriod</ConfigKey>
 		</Connection>
@@ -1749,7 +1696,7 @@
 		<Tooltip>Headphone volume control</Tooltip>
 		<NumberStates>29</NumberStates>
 		<Path>knob_rotate_%1.png</Path>
-		<Pos>656,236</Pos>
+		<Pos>36,80</Pos>
 		<Connection>
 			<ConfigKey>[Master],headVolume</ConfigKey>
 		</Connection>
@@ -1758,7 +1705,7 @@
 		<Tooltip>Headphone mix control</Tooltip>
 		<NumberStates>29</NumberStates>
 		<Path>knob_rotate_%1.png</Path>
-		<Pos>594,236</Pos>
+		<Pos>126,80</Pos>
 		<Connection>
 			<ConfigKey>[Master],headMix</ConfigKey>
 		</Connection>
@@ -1773,7 +1720,7 @@
 		<Tooltip>Gain control</Tooltip>
 		<NumberStates>29</NumberStates>
 		<Path>knob_rotate_%1.png</Path>
-		<Pos>540,174</Pos>
+		<Pos>540,160</Pos>
 		<Connection>
 			<ConfigKey>[Channel1],pregain</ConfigKey>
 		</Connection>
@@ -1782,7 +1729,7 @@
 		<Tooltip>Treble filter control</Tooltip>
 		<NumberStates>29</NumberStates>
 		<Path>knob_rotate_%1.png</Path>
-		<Pos>540,256</Pos>
+		<Pos>540,242</Pos>
 		<Connection>
 			<ConfigKey>[Channel1],filterHigh</ConfigKey>
 		</Connection>
@@ -1791,7 +1738,7 @@
 		<Tooltip>Mid filter control</Tooltip>
 		<NumberStates>29</NumberStates>
 		<Path>knob_rotate_%1.png</Path>
-		<Pos>540,312</Pos>
+		<Pos>540,298</Pos>
 		<Connection>
 			<ConfigKey>[Channel1],filterMid</ConfigKey>
 		</Connection>
@@ -1800,7 +1747,7 @@
 		<Tooltip>Bass filter control</Tooltip>
 		<NumberStates>29</NumberStates>
 		<Path>knob_rotate_%1.png</Path>
-		<Pos>540,364</Pos>
+		<Pos>540,350</Pos>
 		<Connection>
 			<ConfigKey>[Channel1],filterLow</ConfigKey>
 		</Connection>
@@ -1810,7 +1757,7 @@
 		<Tooltip>Gain control</Tooltip>
 		<NumberStates>29</NumberStates>
 		<Path>knob_rotate_%1.png</Path>
-		<Pos>709,174</Pos>
+		<Pos>709,160</Pos>
 		<Connection>
 			<ConfigKey>[Channel2],pregain</ConfigKey>
 		</Connection>
@@ -1819,7 +1766,7 @@
 		<Tooltip>Treble filter control</Tooltip>
 		<NumberStates>29</NumberStates>
 		<Path>knob_rotate_%1.png</Path>
-		<Pos>709,256</Pos>
+		<Pos>709,242</Pos>
 		<Connection>
 			<ConfigKey>[Channel2],filterHigh</ConfigKey>
 		</Connection>
@@ -1828,7 +1775,7 @@
 		<Tooltip>Mid filter control</Tooltip>
 		<NumberStates>29</NumberStates>
 		<Path>knob_rotate_%1.png</Path>
-		<Pos>709,312</Pos>
+		<Pos>709,298</Pos>
 		<Connection>
 			<ConfigKey>[Channel2],filterMid</ConfigKey>
 		</Connection>
@@ -1837,7 +1784,7 @@
 		<Tooltip>Bass filter control</Tooltip>
 		<NumberStates>29</NumberStates>
 		<Path>knob_rotate_%1.png</Path>
-		<Pos>709,364</Pos>
+		<Pos>709,350</Pos>
 		<Connection>
 			<ConfigKey>[Channel2],filterLow</ConfigKey>
 		</Connection>
