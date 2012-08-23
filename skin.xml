@@ -156,111 +156,100 @@
 	Visual - Volume level display
 	**********************************************
 	-->
+
 	<VuMeter>
-		<Tooltip>Channel volume display</Tooltip>
+		<Tooltip>Channel[1] output volume display</Tooltip>
+		<PathVu>btn_volumeh_display_over.png</PathVu>
+		<PathBack>btn_volumeh_display.png</PathBack>
+		<Pos>340,250</Pos>
+		<Horizontal>true</Horizontal>
+		<PeakHoldSize>5</PeakHoldSize>
+		<PeakHoldTime>200</PeakHoldTime>
+		<Connection>
+			<ConfigKey>[Channel1],VuMeter</ConfigKey>
+		</Connection>
+	</VuMeter>
+
+	<VuMeter>
+		<Tooltip>Channel[2] output volume display</Tooltip>
+		<PathVu>btn_volumeh_display_over.png</PathVu>
+		<PathBack>btn_volumeh_display.png</PathBack>
+		<Pos>800,250</Pos>
+		<Horizontal>true</Horizontal>
+		<PeakHoldSize>5</PeakHoldSize>
+		<PeakHoldTime>200</PeakHoldTime>
+		<Connection>
+			<ConfigKey>[Channel2],VuMeter</ConfigKey>
+		</Connection>
+	</VuMeter>
+
+	<VuMeter>
+		<Tooltip>Master output volume display, L</Tooltip>
 		<PathVu>btn_volume_display_over.png</PathVu>
 		<PathBack>btn_volume_display.png</PathBack>
 		<Pos>516,190</Pos>
 		<Horizontal>false</Horizontal>
 		<PeakHoldSize>5</PeakHoldSize>
 		<PeakHoldTime>200</PeakHoldTime>
-		<!--
-		<PeakFallTime>80</PeakFallTime>
-  		<PeakFallStep>5</PeakFallStep>
-  		-->
 		<Connection>
-			<ConfigKey>[Channel1],VuMeter</ConfigKey>
+			<ConfigKey>[Master],VuMeterL</ConfigKey>
 		</Connection>
 	</VuMeter>
 	<VuMeter>
-		<Tooltip>Channel volume display</Tooltip>
+		<Tooltip>Master output volume display, R</Tooltip>
 		<PathVu>btn_volume_display_over.png</PathVu>
 		<PathBack>btn_volume_display.png</PathBack>
 		<Pos>748,190</Pos>
 		<Horizontal>false</Horizontal>
 		<PeakHoldSize>5</PeakHoldSize>
 		<PeakHoldTime>200</PeakHoldTime>
-		<!--  <PeakFallTime>80</PeakFallTime>
-  		<PeakFallStep>5</PeakFallStep> -->
 		<Connection>
-			<ConfigKey>[Channel2],VuMeter</ConfigKey>
+			<ConfigKey>[Master],VuMeterR</ConfigKey>
 		</Connection>
 	</VuMeter>
-
-	<!--***Usage for single Master volume display***-->
-	<!--
-	<VuMeter>
-		<Tooltip>Master volume display</Tooltip>
-		<PathVu>btn_volume_display_master1_over.png</PathVu>
-		<PathBack>btn_volume_display_master1.png</PathBack>
-		<Pos>505,159</Pos>
-		<Horizontal>false</Horizontal>
-		<PeakHoldSize>5</PeakHoldSize>
-		<PeakHoldTime>400</PeakHoldTime>
-		<PeakFallTime>80</PeakFallTime>
-		<PeakFallStep>5</PeakFallStep>
-		<Connection>
-			<ConfigKey>[Master],VuMeter</ConfigKey>
-		</Connection>
-	</VuMeter>
-	-->
-
-	<!--<VuMeter>-->
-	<!--	<Tooltip>Left Channel Master Volume</Tooltip>-->
-	<!--	<PathVu>btn_volume_display_master1_over.png</PathVu>-->
-	<!--	<PathBack>btn_volume_display_master1.png</PathBack>-->
-	<!--	<Pos>499,160</Pos>-->
-	<!--	<PeakHoldSize>5</PeakHoldSize>-->
-	<!--	<PeakHoldTime>400</PeakHoldTime>-->
-	<!--	<Connection>-->
-	<!--		<ConfigKey>[Master],VuMeterL</ConfigKey>-->
-	<!--	</Connection>-->
-	<!--</VuMeter>-->
-	<!--<VuMeter>-->
-	<!--	<Tooltip>Right Channel Master Volume</Tooltip>-->
-	<!--	<PathVu>btn_volume_display_master2_over.png</PathVu>-->
-	<!--	<PathBack>btn_volume_display_master2.png</PathBack>-->
-	<!--	<Pos>511,160</Pos>-->
-	<!--	<PeakHoldSize>5</PeakHoldSize>-->
-	<!--	<PeakHoldTime>400</PeakHoldTime>-->
-	<!--	<Connection>-->
-	<!--		<ConfigKey>[Master],VuMeterR</ConfigKey>-->
-	<!--	</Connection>-->
-	<!--</VuMeter>-->
 
 	<!--
 	**********************************************
 	Visual- Volume peak indicator
 	**********************************************
 	-->
-<!--	<StatusLight>-->
-<!--	    <Tooltip>Peak Indicator</Tooltip>-->
-<!--		<PathStatusLight>btn_clipping1_over.png</PathStatusLight>-->
-<!--		<PathBack>btn_clipping1.png</PathBack>-->
-<!--		<Pos>90,351</Pos>-->
-<!--		<Connection>-->
-<!--			<ConfigKey>[Channel1],PeakIndicator</ConfigKey>-->
-<!--		</Connection>-->
-<!--    </StatusLight>-->
-<!--	<StatusLight>-->
-<!--		<Tooltip>Peak Indicator</Tooltip>-->
-<!--		<PathStatusLight>btn_clipping2_over.png</PathStatusLight>-->
-<!--		<PathBack>btn_clipping2.png</PathBack>-->
-<!--		<Pos>1001,351</Pos>-->
-<!--		<Connection>-->
-<!--			<ConfigKey>[Channel2],PeakIndicator</ConfigKey>-->
-<!--		</Connection>-->
-<!--	</StatusLight>-->
-<!---->
-<!--	<StatusLight>-->
-<!--		<Tooltip>Peak Indicator</Tooltip>-->
-<!--		<PathStatusLight>btn_clipping_master_over.png</PathStatusLight>-->
-<!--		<PathBack>btn_clipping_master.png</PathBack>-->
-<!--		<Pos>500,153</Pos>-->
-<!--		<Connection>-->
-<!--			<ConfigKey>[Master],PeakIndicator</ConfigKey>-->
-<!--		</Connection>-->
-<!--	</StatusLight>-->
+	<StatusLight>
+	    <Tooltip>Peak Indicator</Tooltip>
+		<PathStatusLight>btn_kill_over.png</PathStatusLight>
+		<PathBack>btn_kill.png</PathBack>
+		<Pos>480,253</Pos>
+		<Connection>
+			<ConfigKey>[Channel1],PeakIndicator</ConfigKey>
+		</Connection>
+    </StatusLight>
+	<StatusLight>
+		<Tooltip>Peak Indicator</Tooltip>
+		<PathStatusLight>btn_kill_over.png</PathStatusLight>
+		<PathBack>btn_kill.png</PathBack>
+		<Pos>940,253</Pos>
+		<Connection>
+			<ConfigKey>[Channel2],PeakIndicator</ConfigKey>
+		</Connection>
+	</StatusLight>
+
+	<StatusLight>
+		<Tooltip>Peak Indicator</Tooltip>
+		<PathStatusLight>btn_kill_over.png</PathStatusLight>
+		<PathBack>btn_kill.png</PathBack>
+		<Pos>519,180</Pos>
+		<Connection>
+			<ConfigKey>[Master],PeakIndicator</ConfigKey>
+		</Connection>
+	</StatusLight>
+	<StatusLight>
+		<Tooltip>Peak Indicator</Tooltip>
+		<PathStatusLight>btn_kill_over.png</PathStatusLight>
+		<PathBack>btn_kill.png</PathBack>
+		<Pos>751,180</Pos>
+		<Connection>
+			<ConfigKey>[Master],PeakIndicator</ConfigKey>
+		</Connection>
+	</StatusLight>
 
 	<!--
 	############################################################################################
@@ -282,11 +271,9 @@
 		<Size>488,20</Size>
 		<FontSize>13</FontSize>
 		<Alignment>left</Alignment>
-		<!--<FgColor>#999999</FgColor>-->
 		<Style>font: bold 14px/16px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
 		background-color: transparent; color: #999999; text-align: left; padding-left: 1%;
 		</Style>
-		<!--<BgColor>#FF0000</BgColor>-->
 	</Text>
 	<Text>
 		<Tooltip>Track information display</Tooltip>
@@ -295,8 +282,6 @@
 		<Size>488,20</Size>
 		<FontSize>13</FontSize>
 		<Alignment>right</Alignment>
-		<!--<FgColor>#999999</FgColor>-->
-		<!--<BgColor>#FF0000</BgColor>-->
 		<Style>font: bold 14px/16px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
 		background-color: transparent; color: #999999; text-align: left; padding-left: 1%;
 		</Style>
@@ -310,13 +295,11 @@
 	<NumberBpm>
 		<Tooltip>Tempo display (BPM=Beat Per Minute)</Tooltip>
 		<Channel>1</Channel>
-		<Pos>12, 256</Pos>
+		<Pos>12, 250</Pos>
 		<Size>110,20</Size>
 		<FontSize>12</FontSize>
 		<Alignment>left</Alignment>
 		<NumberOfDigits>6</NumberOfDigits>
-		<!--<FgColor>#aaaaaa</FgColor>-->
-		<!--<BgColor>#FF0000</BgColor>-->
 		<Style>font: bold 14px/16px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
 		background-color: transparent; color: #999999; text-align: left; padding-left: 1%;
 		</Style>
@@ -327,13 +310,11 @@
 	<NumberBpm>
 		<Tooltip>Tempo display (BPM=Beat Per Minute)</Tooltip>
 		<Channel>2</Channel>
-		<Pos>1158,256</Pos>
+		<Pos>1158,250</Pos>
 		<Size>110,20</Size>
 		<FontSize>12</FontSize>
 		<Alignment>right</Alignment>
 		<NumberOfDigits>6</NumberOfDigits>
-		<!--<FgColor>#aaaaaa</FgColor>-->
-		<!--<BgColor>#FF0000</BgColor>-->
 		<Style>font: bold 14px/16px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
 		background-color: transparent; color: #999999; text-align: left; padding-left: 1%;
 		</Style>
@@ -350,13 +331,11 @@
 	<NumberPos>
 		<Tooltip>Play position/remaining time</Tooltip>
 		<Channel>1</Channel>
-		<Pos>142,256</Pos>
+		<Pos>142,250</Pos>
 		<Size>180,20</Size>
 		<FontSize>12</FontSize>
 		<Alignment>left</Alignment>
 		<NumberOfDigits>6</NumberOfDigits>
-		<!--<FgColor>#aaaaaa</FgColor>-->
-		<!--<BgColor>#FF0000</BgColor>-->
 		<Style>font: bold 14px/16px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
 		background-color: transparent; color: #bbbbbb; text-align: left; padding-left: 1%;
 		</Style>
@@ -367,13 +346,11 @@
 	<NumberPos>
 		<Tooltip>Play position/remaining time</Tooltip>
 		<Channel>2</Channel>
-		<Pos>958,256</Pos>
+		<Pos>958,250</Pos>
 		<Size>180,20</Size>
 		<FontSize>12</FontSize>
 		<NumberOfDigits>6</NumberOfDigits>
 		<Alignment>left</Alignment>
-		<!--<FgColor>#aaaaaa</FgColor>-->
-		<!--<BgColor>#FF0000</BgColor>-->
 		<Style>font: bold 14px/16px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
 		background-color: transparent; color: #bbbbbb; text-align: left; padding-left: 1%;
 		</Style>
@@ -851,7 +828,7 @@
 			<Pressed>btn_pitch_down_over.png</Pressed>
 			<Unpressed>btn_pitch_down.png</Unpressed>
 		</State>
-		<Pos>440,414</Pos>
+		<Pos>440,404</Pos>
 		<Connection>
 			<ConfigKey>[Channel1],rate_perm_down</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -871,7 +848,7 @@
 			<Pressed>btn_pitch_down_over.png</Pressed>
 			<Unpressed>btn_pitch_down.png</Unpressed>
 		</State>
-		<Pos>820,414</Pos>
+		<Pos>820,404</Pos>
 		<Connection>
 			<ConfigKey>[Channel2],rate_perm_down</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -958,7 +935,7 @@
 			<Pressed>btn_nudge_down_over.png</Pressed>
 			<Unpressed>btn_nudge_down.png</Unpressed>
 		</State>
-		<Pos>440,454</Pos>
+		<Pos>440,444</Pos>
 		<Connection>
 			<ConfigKey>[Channel1],rate_temp_down</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
@@ -988,7 +965,7 @@
 			<Pressed>btn_nudge_down_over.png</Pressed>
 			<Unpressed>btn_nudge_down.png</Unpressed>
 		</State>
-		<Pos>820,454</Pos>
+		<Pos>820,444</Pos>
 		<Connection>
 			<ConfigKey>[Channel2],rate_temp_down</ConfigKey>
 			<EmitOnDownPress>true</EmitOnDownPress>
