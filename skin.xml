@@ -1,0 +1,1607 @@
+  <!--06 May 2010 14:28:14 CET-->
+  <!--
+     FutureTale v0.1, Skin for Mixxx 1.8~beta1
+     www.mixxx.org
+	 Copyright (C) 2010 cadeyrn ; cadeyrn@webportfolio.hu
+
+	 based on LateNightBlues” Skin xml by jus ; jus/justmail/de
+
+     This skin is a free software; you can redistribute it and/or modify
+     it under the terms of the GNU General Public License as published by
+     the Free Software Foundation; either version 2 of the License, or
+     (at your option) any later version.
+  -->
+
+<!DOCTYPE skin>
+<skin>
+	<Background>
+		<Path>background1280x1024.png</Path>
+		<BgColor>#000000</BgColor>
+	</Background>
+
+	<!--
+	**********************************************
+	General- Browsermode,Search and Library display
+	**********************************************
+	-->
+	<ComboBox>
+		<Pos>6,512</Pos>
+		<Size>350,25</Size>
+		<BgColor>#fafafa</BgColor>
+	</ComboBox>
+	<Search>
+		<Pos>758,512</Pos>
+		<Size>350,25</Size>
+		<BgColor>#fafafa</BgColor>
+	</Search>
+	<TableView>
+		<Pos>8,552</Pos>
+		<Size>1264,464</Size>
+		<BgColor>#111111</BgColor>
+		<FgColor>#151515</FgColor>
+		<BgColorRowEven>#222222</BgColorRowEven>
+		<BgColorRowUneven>#333333</BgColorRowUneven>
+	</TableView>
+
+	<!--
+	############################################################################################
+	############################################################################################
+	Section: Visual
+	############################################################################################
+	############################################################################################
+	-->
+
+	<!--
+	**********************************************
+	Visual- Waveform
+	**********************************************
+	-->
+	<Visual>
+		<Tooltip>Drag with mouse to control sound playback. Drop tracks from external file manager here</Tooltip>
+		<Channel>1</Channel>
+		<Pos>241,6</Pos>
+		<Size>798,66</Size>
+		<!--<Pos>6,6</Pos>-->
+		<!--<Size>1268,66</Size>-->
+		<BgColor>#222222</BgColor>
+		<SignalColor>#455282</SignalColor>
+		<BeatColor>#dddddd</BeatColor>
+		<MarkerColor>#0099FF</MarkerColor>
+		<CueColor>#00FF00</CueColor>
+		<FisheyeColor>#2D3439</FisheyeColor>
+		<Zoom>true</Zoom>
+		<Mark>
+			<Control>cue_point</Control>
+			<Text>CUE</Text>
+		</Mark>
+		<MarkRange>
+			<StartControl>loop_start_position</StartControl>
+			<EndControl>loop_end_position</EndControl>
+			<EnabledControl>loop_enabled</EnabledControl>
+		</MarkRange>
+		<Mark>
+			<Control>loop_start_position</Control>
+			<Text>IN</Text>
+		</Mark>
+		<Mark>
+			<Control>loop_end_position</Control>
+			<Text>OUT</Text>
+		</Mark>
+	</Visual>
+	<Visual>
+		<Tooltip>Drag with mouse to control sound playback. Drop tracks from external file manager here</Tooltip>
+		<Channel>2</Channel>
+		<Pos>241,75</Pos>
+		<Size>798,66</Size>
+		<BgColor>#222222</BgColor>
+		<SignalColor>#a2232a</SignalColor>
+		<BeatColor>#dddddd</BeatColor>
+		<MarkerColor>#0099FF</MarkerColor>
+		<CueColor>#00FF00</CueColor>
+		<FisheyeColor>#2D3439</FisheyeColor>
+		<Zoom>true</Zoom>
+		<Mark>
+			<Control>cue_point</Control>
+			<Text>CUE</Text>
+		</Mark>
+		<MarkRange>
+			<StartControl>loop_start_position</StartControl>
+			<EndControl>loop_end_position</EndControl>
+			<EnabledControl>loop_enabled</EnabledControl>
+		</MarkRange>
+		<Mark>
+			<Control>loop_start_position</Control>
+			<Text>IN</Text>
+		</Mark>
+		<Mark>
+			<Control>loop_end_position</Control>
+			<Text>OUT</Text>
+		</Mark>
+	</Visual>
+
+	<!--
+	**********************************************
+	Visaul- Waveform overview
+	**********************************************
+	-->
+	<Overview>
+		<Tooltip>Overview display of waveform</Tooltip>
+		<Channel>1</Channel>
+		<Pos>11,152</Pos>
+		<Size>488,47</Size>
+		<BgColor>#333333</BgColor>
+		<SignalColor>#455282</SignalColor>
+		<MarkerColor>#ffffff</MarkerColor>
+		<Connection>
+			<ConfigKey>[Channel1],playposition</ConfigKey>
+			<EmitOnDownPress>false</EmitOnDownPress>
+		</Connection>
+	</Overview>
+	<Overview>
+		<Tooltip>Overview display of waveform</Tooltip>
+		<Channel>2</Channel>
+		<Pos>781,152</Pos>
+		<Size>488,47</Size>
+		<BgColor>#333333</BgColor>
+		<SignalColor>#a2232a</SignalColor>
+		<MarkerColor>#ffffff</MarkerColor>
+		<Connection>
+			<ConfigKey>[Channel2],playposition</ConfigKey>
+			<EmitOnDownPress>false</EmitOnDownPress>
+		</Connection>
+	</Overview>
+
+	<!--
+	**********************************************
+	Visual - Volume level display
+	**********************************************
+	-->
+	<VuMeter>
+		<Tooltip>Channel volume display</Tooltip>
+		<PathVu>btn_volume_display_over.png</PathVu>
+		<PathBack>btn_volume_display.png</PathBack>
+		<Pos>516,190</Pos>
+		<Horizontal>false</Horizontal>
+		<PeakHoldSize>5</PeakHoldSize>
+		<PeakHoldTime>200</PeakHoldTime>
+		<!--
+		<PeakFallTime>80</PeakFallTime>
+  		<PeakFallStep>5</PeakFallStep>
+  		-->
+		<Connection>
+			<ConfigKey>[Channel1],VuMeter</ConfigKey>
+		</Connection>
+	</VuMeter>
+	<VuMeter>
+		<Tooltip>Channel volume display</Tooltip>
+		<PathVu>btn_volume_display_over.png</PathVu>
+		<PathBack>btn_volume_display.png</PathBack>
+		<Pos>748,190</Pos>
+		<Horizontal>false</Horizontal>
+		<PeakHoldSize>5</PeakHoldSize>
+		<PeakHoldTime>200</PeakHoldTime>
+		<!--  <PeakFallTime>80</PeakFallTime>
+  		<PeakFallStep>5</PeakFallStep> -->
+		<Connection>
+			<ConfigKey>[Channel2],VuMeter</ConfigKey>
+		</Connection>
+	</VuMeter>
+
+	<!--***Usage for single Master volume display***-->
+	<!--
+	<VuMeter>
+		<Tooltip>Master volume display</Tooltip>
+		<PathVu>btn_volume_display_master1_over.png</PathVu>
+		<PathBack>btn_volume_display_master1.png</PathBack>
+		<Pos>505,159</Pos>
+		<Horizontal>false</Horizontal>
+		<PeakHoldSize>5</PeakHoldSize>
+		<PeakHoldTime>400</PeakHoldTime>
+		<PeakFallTime>80</PeakFallTime>
+		<PeakFallStep>5</PeakFallStep>
+		<Connection>
+			<ConfigKey>[Master],VuMeter</ConfigKey>
+		</Connection>
+	</VuMeter>
+	-->
+
+	<!--<VuMeter>-->
+	<!--	<Tooltip>Left Channel Master Volume</Tooltip>-->
+	<!--	<PathVu>btn_volume_display_master1_over.png</PathVu>-->
+	<!--	<PathBack>btn_volume_display_master1.png</PathBack>-->
+	<!--	<Pos>499,160</Pos>-->
+	<!--	<PeakHoldSize>5</PeakHoldSize>-->
+	<!--	<PeakHoldTime>400</PeakHoldTime>-->
+	<!--	<Connection>-->
+	<!--		<ConfigKey>[Master],VuMeterL</ConfigKey>-->
+	<!--	</Connection>-->
+	<!--</VuMeter>-->
+	<!--<VuMeter>-->
+	<!--	<Tooltip>Right Channel Master Volume</Tooltip>-->
+	<!--	<PathVu>btn_volume_display_master2_over.png</PathVu>-->
+	<!--	<PathBack>btn_volume_display_master2.png</PathBack>-->
+	<!--	<Pos>511,160</Pos>-->
+	<!--	<PeakHoldSize>5</PeakHoldSize>-->
+	<!--	<PeakHoldTime>400</PeakHoldTime>-->
+	<!--	<Connection>-->
+	<!--		<ConfigKey>[Master],VuMeterR</ConfigKey>-->
+	<!--	</Connection>-->
+	<!--</VuMeter>-->
+
+	<!--
+	**********************************************
+	Visual- Volume peak indicator
+	**********************************************
+	-->
+<!--	<StatusLight>-->
+<!--	    <Tooltip>Peak Indicator</Tooltip>-->
+<!--		<PathStatusLight>btn_clipping1_over.png</PathStatusLight>-->
+<!--		<PathBack>btn_clipping1.png</PathBack>-->
+<!--		<Pos>90,351</Pos>-->
+<!--		<Connection>-->
+<!--			<ConfigKey>[Channel1],PeakIndicator</ConfigKey>-->
+<!--		</Connection>-->
+<!--    </StatusLight>-->
+<!--	<StatusLight>-->
+<!--		<Tooltip>Peak Indicator</Tooltip>-->
+<!--		<PathStatusLight>btn_clipping2_over.png</PathStatusLight>-->
+<!--		<PathBack>btn_clipping2.png</PathBack>-->
+<!--		<Pos>1001,351</Pos>-->
+<!--		<Connection>-->
+<!--			<ConfigKey>[Channel2],PeakIndicator</ConfigKey>-->
+<!--		</Connection>-->
+<!--	</StatusLight>-->
+<!---->
+<!--	<StatusLight>-->
+<!--		<Tooltip>Peak Indicator</Tooltip>-->
+<!--		<PathStatusLight>btn_clipping_master_over.png</PathStatusLight>-->
+<!--		<PathBack>btn_clipping_master.png</PathBack>-->
+<!--		<Pos>500,153</Pos>-->
+<!--		<Connection>-->
+<!--			<ConfigKey>[Master],PeakIndicator</ConfigKey>-->
+<!--		</Connection>-->
+<!--	</StatusLight>-->
+
+	<!--
+	############################################################################################
+	############################################################################################
+	Section: Text
+	############################################################################################
+	############################################################################################
+	-->
+
+	<!--
+	**********************************************
+	Text- Track information
+	**********************************************
+	-->
+	<Text>
+		<Tooltip>Track information display</Tooltip>
+		<Channel>1</Channel>
+		<Pos>12,210</Pos>
+		<Size>488,20</Size>
+		<FontSize>13</FontSize>
+		<Alignment>left</Alignment>
+		<!--<FgColor>#999999</FgColor>-->
+		<Style>font: bold 14px/16px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
+		background-color: transparent; color: #999999; text-align: left; padding-left: 1%;
+		</Style>
+		<!--<BgColor>#FF0000</BgColor>-->
+	</Text>
+	<Text>
+		<Tooltip>Track information display</Tooltip>
+		<Channel>2</Channel>
+		<Pos>780,210</Pos>
+		<Size>488,20</Size>
+		<FontSize>13</FontSize>
+		<Alignment>right</Alignment>
+		<!--<FgColor>#999999</FgColor>-->
+		<!--<BgColor>#FF0000</BgColor>-->
+		<Style>font: bold 14px/16px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
+		background-color: transparent; color: #999999; text-align: left; padding-left: 1%;
+		</Style>
+	</Text>
+
+	<!--
+	**********************************************
+	Text- BPM number display
+	**********************************************
+	-->
+	<NumberBpm>
+		<Tooltip>Tempo display (BPM=Beat Per Minute)</Tooltip>
+		<Channel>1</Channel>
+		<Pos>12, 256</Pos>
+		<Size>110,20</Size>
+		<FontSize>12</FontSize>
+		<Alignment>left</Alignment>
+		<NumberOfDigits>6</NumberOfDigits>
+		<!--<FgColor>#aaaaaa</FgColor>-->
+		<!--<BgColor>#FF0000</BgColor>-->
+		<Style>font: bold 14px/16px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
+		background-color: transparent; color: #999999; text-align: left; padding-left: 1%;
+		</Style>
+		<Connection>
+			<ConfigKey>[Channel1],bpm</ConfigKey>
+		</Connection>
+	</NumberBpm>
+	<NumberBpm>
+		<Tooltip>Tempo display (BPM=Beat Per Minute)</Tooltip>
+		<Channel>2</Channel>
+		<Pos>1158,256</Pos>
+		<Size>110,20</Size>
+		<FontSize>12</FontSize>
+		<Alignment>right</Alignment>
+		<NumberOfDigits>6</NumberOfDigits>
+		<!--<FgColor>#aaaaaa</FgColor>-->
+		<!--<BgColor>#FF0000</BgColor>-->
+		<Style>font: bold 14px/16px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
+		background-color: transparent; color: #999999; text-align: left; padding-left: 1%;
+		</Style>
+		<Connection>
+			<ConfigKey>[Channel2],bpm</ConfigKey>
+		</Connection>
+	</NumberBpm>
+
+	<!--
+	**********************************************
+	Text- Playing position / Time remaining
+	**********************************************
+	-->
+	<NumberPos>
+		<Tooltip>Play position/remaining time</Tooltip>
+		<Channel>1</Channel>
+		<Pos>142,256</Pos>
+		<Size>180,20</Size>
+		<FontSize>12</FontSize>
+		<Alignment>left</Alignment>
+		<NumberOfDigits>6</NumberOfDigits>
+		<!--<FgColor>#aaaaaa</FgColor>-->
+		<!--<BgColor>#FF0000</BgColor>-->
+		<Style>font: bold 14px/16px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
+		background-color: transparent; color: #bbbbbb; text-align: left; padding-left: 1%;
+		</Style>
+		<Connection>
+			<ConfigKey>[Channel1],playposition</ConfigKey>
+		</Connection>
+	</NumberPos>
+	<NumberPos>
+		<Tooltip>Play position/remaining time</Tooltip>
+		<Channel>2</Channel>
+		<Pos>958,256</Pos>
+		<Size>180,20</Size>
+		<FontSize>12</FontSize>
+		<NumberOfDigits>6</NumberOfDigits>
+		<Alignment>left</Alignment>
+		<!--<FgColor>#aaaaaa</FgColor>-->
+		<!--<BgColor>#FF0000</BgColor>-->
+		<Style>font: bold 14px/16px Lucida Grande, Lucida Sans Unicode, Arial, Verdana, sans-serif;
+		background-color: transparent; color: #bbbbbb; text-align: left; padding-left: 1%;
+		</Style>
+		<Connection>
+			<ConfigKey>[Channel2],playposition</ConfigKey>
+		</Connection>
+	</NumberPos>
+
+	<!--
+	**********************************************
+	Text- Pitch rate display
+	**********************************************
+	-->
+	<NumberRate>
+		<Tooltip>Pitch rate display</Tooltip>
+		<Channel>1</Channel>
+		<Pos>450,306</Pos>
+		<Size>60,20</Size>
+		<FontSize>10</FontSize>
+		<Alignment>left</Alignment>
+		<NumberOfDigits>3</NumberOfDigits>
+		<FgColor>#cccccc</FgColor>
+		<!--<BgColor>#FF0000</BgColor>-->
+		<Connection>
+			<ConfigKey>[Channel1],rate</ConfigKey>
+		</Connection>
+	</NumberRate>
+	<NumberRate>
+		<Tooltip>Pitch rate display</Tooltip>
+		<Channel>2</Channel>
+		<Pos>790,306</Pos>
+		<Size>60,20</Size>
+		<FontSize>10</FontSize>
+		<Alignment>left</Alignment>
+		<NumberOfDigits>3</NumberOfDigits>
+		<FgColor>#cccccc</FgColor>
+		<!--<BgColor>#FF0000</BgColor>-->
+		<Connection>
+			<ConfigKey>[Channel2],rate</ConfigKey>
+		</Connection>
+	</NumberRate>
+
+	<!--
+	############################################################################################
+	############################################################################################
+	Section: Slider
+	############################################################################################
+	############################################################################################
+	-->
+
+	<!--
+	**********************************************
+	Slider- Channel Volume
+	**********************************************
+	-->
+	<SliderComposed>
+		<Tooltip>Channel 1 volume control</Tooltip>
+		<Handle>knob_volume.png</Handle>
+		<Slider>slider_volume.png</Slider>
+		<Pos>604,300</Pos>
+		<Horizontal>false</Horizontal>
+		<Connection>
+			<ConfigKey>[Channel1],volume</ConfigKey>
+			<EmitOnDownPress>false</EmitOnDownPress>
+		</Connection>
+	</SliderComposed>
+	<SliderComposed>
+		<Tooltip>Channel 2 volume control</Tooltip>
+		<Handle>knob_volume.png</Handle>
+		<Slider>slider_volume.png</Slider>
+		<Pos>664,300</Pos>
+		<Horizontal>false</Horizontal>
+		<Connection>
+			<ConfigKey>[Channel2],volume</ConfigKey>
+			<EmitOnDownPress>false</EmitOnDownPress>
+		</Connection>
+	</SliderComposed>
+
+	<!--
+	**********************************************
+	Slider- Crossfader
+	**********************************************
+	-->
+	<SliderComposed>
+		<Tooltip>Crossfader</Tooltip>
+		<Handle>knob_crossfader.png</Handle>
+		<Slider>slider_crossfader.png</Slider>
+		<Pos>537,486</Pos>
+		<Horizontal>true</Horizontal>
+		<Connection>
+			<ConfigKey>[Master],crossfader</ConfigKey>
+			<EmitOnDownPress>false</EmitOnDownPress>
+		</Connection>
+	</SliderComposed>
+
+    <!--
+	**********************************************
+	Slider- Pitch control
+	**********************************************
+	-->
+	<SliderComposed>
+		<Tooltip>Pitch control</Tooltip>
+		<Handle>knob_volume.png</Handle>
+		<Slider>slider_pitch.png</Slider>
+		<Pos>476,326</Pos>
+		<Horizontal>false</Horizontal>
+		<Connection>
+			<ConfigKey>[Channel1],rate</ConfigKey>
+			<EmitOnDownPress>false</EmitOnDownPress>
+		</Connection>
+	</SliderComposed>
+	<SliderComposed>
+		<Tooltip>Pitch control</Tooltip>
+		<Handle>knob_volume.png</Handle>
+		<Slider>slider_pitch.png</Slider>
+		<Pos>788,326</Pos>
+		<Horizontal>false</Horizontal>
+		<Connection>
+			<ConfigKey>[Channel2],rate</ConfigKey>
+			<EmitOnDownPress>false</EmitOnDownPress>
+		</Connection>
+	</SliderComposed>
+
+	<!--
+	############################################################################################
+	############################################################################################
+	Section: Buttons
+	############################################################################################
+	############################################################################################
+	-->
+
+    <!--
+    ****************************************
+     Button- Play
+    ****************************************
+    -->
+	<PushButton>
+		<Tooltip>Left Click: Pause/play, Right Click: Set cue point</Tooltip>
+		<NumberStates>2</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_play.png</Pressed>
+			<Unpressed>btn_play.png</Unpressed>
+		</State>
+		<State>
+			<Number>1</Number>
+			<Pressed>btn_play1_over.png</Pressed>
+			<Unpressed>btn_play1_over.png</Unpressed>
+		</State>
+		<Pos>300,320</Pos>
+		<Connection>
+			<ConfigKey>[Channel1],play</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+		<Connection>
+			<ConfigKey>[Channel1],cue_set</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>RightButton</ButtonState>
+			</Connection>
+    </PushButton>
+	<PushButton>
+		<Tooltip>Left Click: Pause/play, Right Click: Set cue point</Tooltip>
+		<NumberStates>2</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_play.png</Pressed>
+			<Unpressed>btn_play.png</Unpressed>
+		</State>
+		<State>
+			<Number>1</Number>
+			<Pressed>btn_play2_over.png</Pressed>
+			<Unpressed>btn_play2_over.png</Unpressed>
+		</State>
+		<Pos>870,320</Pos>
+		<Connection>
+			<ConfigKey>[Channel2],play</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+		<Connection>
+			<ConfigKey>[Channel2],cue_set</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>RightButton</ButtonState>
+			</Connection>
+	</PushButton>
+
+	<!--
+	**********************************************
+	Button- Cue
+	**********************************************
+	-->
+    <PushButton>
+        <Tooltip>Go to and play (while playing), Set cue point (while stopped), Go to and stop (right-click)</Tooltip>
+        <NumberStates>1</NumberStates>
+        <State>
+            <Number>0</Number>
+            <Pressed>btn_cue1_over.png</Pressed>
+            <Unpressed>btn_cue.png</Unpressed>
+        </State>
+        <Pos>357,400</Pos>
+        <Connection>
+            <ConfigKey>[Channel1],cue_default</ConfigKey>
+            <EmitOnDownPress>true</EmitOnDownPress>
+            <ButtonState>LeftButton</ButtonState>
+        </Connection>
+        <Connection>
+            <ConfigKey>[Channel1],cue_gotoandstop</ConfigKey>
+            <EmitOnDownPress>true</EmitOnDownPress>
+            <ButtonState>RightButton</ButtonState>
+        </Connection>
+    </PushButton>
+    <PushButton>
+        <Tooltip>Go to and play (while playing), Set cue point (while stopped), Go to and stop (right-click)</Tooltip>
+        <NumberStates>1</NumberStates>
+        <State>
+            <Number>0</Number>
+            <Pressed>btn_cue2_over.png</Pressed>
+            <Unpressed>btn_cue.png</Unpressed>
+        </State>
+        <Pos>927,400</Pos>
+        <Connection>
+            <ConfigKey>[Channel2],cue_default</ConfigKey>
+            <EmitOnDownPress>true</EmitOnDownPress>
+            <ButtonState>LeftButton</ButtonState>
+        </Connection>
+        <Connection>
+            <ConfigKey>[Channel2],cue_gotoandstop</ConfigKey>
+            <EmitOnDownPress>true</EmitOnDownPress>
+            <ButtonState>RightButton</ButtonState>
+        </Connection>
+    </PushButton>
+
+    <!--
+    ****************************************
+    Button- Reverse playback
+    ****************************************
+    -->
+	<PushButton>
+		<Tooltip>Reverse playback Channel 1</Tooltip>
+		<NumberStates>1</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_back1_over.png</Pressed>
+			<Unpressed>btn_back.png</Unpressed>
+		</State>
+		<Pos>300,400</Pos>
+		<Connection>
+			<ConfigKey>[Channel1],reverse</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+		<Connection>
+			<ConfigKey>[Channel1],reverse</ConfigKey>
+			<EmitOnDownPress>false</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+	</PushButton>
+	<PushButton>
+		<Tooltip>Reverse playback Channel 2</Tooltip>
+		<NumberStates>1</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_back2_over.png</Pressed>
+			<Unpressed>btn_back.png</Unpressed>
+		</State>
+		<Pos>870,400</Pos>
+		<Connection>
+			<ConfigKey>[Channel2],reverse</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+		<Connection>
+			<ConfigKey>[Channel2],reverse</ConfigKey>
+			<EmitOnDownPress>false</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+	</PushButton>
+
+	<!--
+	**********************************************
+	Button- Fast forward and rewind
+	**********************************************
+	-->
+	<PushButton>
+		<Tooltip>Left: Fast forward, Right: Jump to end of track</Tooltip>
+		<NumberStates>1</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_forward1_over.png</Pressed>
+			<Unpressed>btn_forward.png</Unpressed>
+		</State>
+		<Pos>357,448</Pos>
+		<Connection>
+			<ConfigKey>[Channel1],fwd</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+		<Connection>
+			<ConfigKey>[Channel1],fwd</ConfigKey>
+			<EmitOnDownPress>false</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+		<Connection>
+			<ConfigKey>[Channel1],end</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>RightButton</ButtonState>
+		</Connection>
+	</PushButton>
+	<PushButton>
+		<Tooltip>Left: Fast rewind, Right: Jump to begin of track</Tooltip>
+		<NumberStates>1</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_rewind1_over.png</Pressed>
+			<Unpressed>btn_rewind.png</Unpressed>
+		</State>
+		<Pos>300,448</Pos>
+		<Connection>
+			<ConfigKey>[Channel1],back</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+		<Connection>
+			<ConfigKey>[Channel1],back</ConfigKey>
+			<EmitOnDownPress>false</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+		<Connection>
+			<ConfigKey>[Channel1],start</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>RightButton</ButtonState>
+		</Connection>
+	</PushButton>
+
+	<PushButton>
+		<Tooltip>Left: Fast forward, Right: Jump to end of track</Tooltip>
+		<NumberStates>1</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_forward2_over.png</Pressed>
+			<Unpressed>btn_forward.png</Unpressed>
+		</State>
+		<Pos>927,448</Pos>
+		<Connection>
+			<ConfigKey>[Channel2],fwd</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+		<Connection>
+			<ConfigKey>[Channel2],fwd</ConfigKey>
+			<EmitOnDownPress>false</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+		<Connection>
+			<ConfigKey>[Channel2],end</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>RightButton</ButtonState>
+		</Connection>
+	</PushButton>
+	<PushButton>
+		<Tooltip>Left: Fast rewind, Right: Jump to begin of track</Tooltip>
+		<NumberStates>1</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_rewind2_over.png</Pressed>
+			<Unpressed>btn_rewind.png</Unpressed>
+		</State>
+		<Pos>870,448</Pos>
+		<Connection>
+			<ConfigKey>[Channel2],back</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+		<Connection>
+			<ConfigKey>[Channel2],back</ConfigKey>
+			<EmitOnDownPress>false</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+		<Connection>
+			<ConfigKey>[Channel2],start</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>RightButton</ButtonState>
+		</Connection>
+	</PushButton>
+
+	<!--
+	**********************************************
+	Button- Beat sync
+	**********************************************
+	-->
+	<PushButton>
+		<Tooltip>Synchronize tempo with Channel 2</Tooltip>
+		<NumberStates>1</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_sync_over.png</Pressed>
+			<Unpressed>btn_sync.png</Unpressed>
+		</State>
+		<Pos>442,490</Pos>
+		<Connection>
+			<ConfigKey>[Channel1],beatsync</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+	</PushButton>
+	<PushButton>
+		<Tooltip>Left: Synchronize tempo with Channel 1</Tooltip>
+		<NumberStates>1</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_sync_over.png</Pressed>
+			<Unpressed>btn_sync.png</Unpressed>
+		</State>
+		<Pos>790,490</Pos>
+		<Connection>
+			<ConfigKey>[Channel2],beatsync</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+	</PushButton>
+
+
+	<!--
+	**********************************************
+	Button- Pitch control
+	**********************************************
+	-->
+	<PushButton>
+		<Tooltip>Left Click: Increase pitch, Right Click: Increase pitch in small step</Tooltip>
+		<NumberStates>1</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_pitch_up_over.png</Pressed>
+			<Unpressed>btn_pitch_up.png</Unpressed>
+		</State>
+		<Pos>440,374</Pos>
+		<Connection>
+			<ConfigKey>[Channel1],rate_perm_up</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+		<Connection>
+			<ConfigKey>[Channel1],rate_perm_up_small</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>RightButton</ButtonState>
+		</Connection>
+	</PushButton>
+	<PushButton>
+		<Tooltip>Left Click: Increase pitch, Right Click: Increase pitch in small step</Tooltip>
+		<NumberStates>1</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_pitch_up_over.png</Pressed>
+			<Unpressed>btn_pitch_up.png</Unpressed>
+		</State>
+		<Pos>820,374</Pos>
+		<Connection>
+			<ConfigKey>[Channel2],rate_perm_up</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+		<Connection>
+			<ConfigKey>[Channel2],rate_perm_up_small</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>RightButton</ButtonState>
+		</Connection>
+	</PushButton>
+
+	<PushButton>
+		<Tooltip>Left Click: Decrease pitch, Right Click: Decrease pitch in small step</Tooltip>
+		<NumberStates>1</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_pitch_down_over.png</Pressed>
+			<Unpressed>btn_pitch_down.png</Unpressed>
+		</State>
+		<Pos>440,414</Pos>
+		<Connection>
+			<ConfigKey>[Channel1],rate_perm_down</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+		<Connection>
+			<ConfigKey>[Channel1],rate_perm_down_small</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>RightButton</ButtonState>
+		</Connection>
+	</PushButton>
+	<PushButton>
+		<Tooltip>Left: Decrease pitch, Right: Decrease pitch in small step</Tooltip>
+		<NumberStates>1</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_pitch_down_over.png</Pressed>
+			<Unpressed>btn_pitch_down.png</Unpressed>
+		</State>
+		<Pos>820,414</Pos>
+		<Connection>
+			<ConfigKey>[Channel2],rate_perm_down</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+		<Connection>
+			<ConfigKey>[Channel2],rate_perm_down_small</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>RightButton</ButtonState>
+		</Connection>
+	</PushButton>
+
+	<!--
+	**********************************************
+	Button- Pitch bend (Nudge)
+	**********************************************
+	-->
+	<PushButton>
+		<Tooltip>Left: Temporary increase pitch, Right: Temporary increase pitch in small step</Tooltip>
+		<NumberStates>1</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_nudge_up_over.png</Pressed>
+			<Unpressed>btn_nudge_up.png</Unpressed>
+		</State>
+		<Pos>440,334</Pos>
+		<Connection>
+			<ConfigKey>[Channel1],rate_temp_up</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+		<Connection>
+			<ConfigKey>[Channel1],rate_temp_up</ConfigKey>
+			<EmitOnDownPress>false</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+		<Connection>
+			<ConfigKey>[Channel1],rate_temp_up_small</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>RightButton</ButtonState>
+		</Connection>
+		<Connection>
+			<ConfigKey>[Channel1],rate_temp_up_small</ConfigKey>
+			<EmitOnDownPress>false</EmitOnDownPress>
+			<ButtonState>RightButton</ButtonState>
+		</Connection>
+	</PushButton>
+	<PushButton>
+		<Tooltip>Left: Temporary increase pitch, Right: Temporary increase pitch in small step</Tooltip>
+		<NumberStates>1</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_nudge_up_over.png</Pressed>
+			<Unpressed>btn_nudge_up.png</Unpressed>
+		</State>
+		<Pos>820,334</Pos>
+		<Connection>
+			<ConfigKey>[Channel2],rate_temp_up</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+		<Connection>
+			<ConfigKey>[Channel2],rate_temp_up</ConfigKey>
+			<EmitOnDownPress>false</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+		<Connection>
+			<ConfigKey>[Channel2],rate_temp_up_small</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>RightButton</ButtonState>
+		</Connection>
+		<Connection>
+			<ConfigKey>[Channel2],rate_temp_up_small</ConfigKey>
+			<EmitOnDownPress>false</EmitOnDownPress>
+			<ButtonState>RightButton</ButtonState>
+		</Connection>
+	</PushButton>
+
+	<PushButton>
+		<Tooltip>Left Click: Temporary decrease pitch, Right Click: Temporary decrease pitch in small step</Tooltip>
+		<NumberStates>1</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_nudge_down_over.png</Pressed>
+			<Unpressed>btn_nudge_down.png</Unpressed>
+		</State>
+		<Pos>440,454</Pos>
+		<Connection>
+			<ConfigKey>[Channel1],rate_temp_down</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+		<Connection>
+			<ConfigKey>[Channel1],rate_temp_down</ConfigKey>
+			<EmitOnDownPress>false</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+		<Connection>
+			<ConfigKey>[Channel1],rate_temp_down_small</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>RightButton</ButtonState>
+		</Connection>
+		<Connection>
+			<ConfigKey>[Channel1],rate_temp_down_small</ConfigKey>
+			<EmitOnDownPress>false</EmitOnDownPress>
+			<ButtonState>RightButton</ButtonState>
+		</Connection>
+	</PushButton>
+	<PushButton>
+		<Tooltip>Left Click: Temporary decrease pitch, Right Click: Temporary decrease pitch in small step</Tooltip>
+		<NumberStates>1</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_nudge_down_over.png</Pressed>
+			<Unpressed>btn_nudge_down.png</Unpressed>
+		</State>
+		<Pos>820,454</Pos>
+		<Connection>
+			<ConfigKey>[Channel2],rate_temp_down</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+		<Connection>
+			<ConfigKey>[Channel2],rate_temp_down</ConfigKey>
+			<EmitOnDownPress>false</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+		<Connection>
+			<ConfigKey>[Channel2],rate_temp_down_small</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>RightButton</ButtonState>
+		</Connection>
+		<Connection>
+			<ConfigKey>[Channel2],rate_temp_down_small</ConfigKey>
+			<EmitOnDownPress>false</EmitOnDownPress>
+			<ButtonState>RightButton</ButtonState>
+		</Connection>
+	</PushButton>
+
+	<!--
+	**********************************************
+	Button- Prelisten / Monitoring
+	**********************************************
+	-->
+	<PushButton>
+		<Tooltip>Headphone prelisten for Channel 1</Tooltip>
+		<NumberStates>2</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_pfl.png</Pressed>
+			<Unpressed>btn_pfl.png</Unpressed>
+		</State>
+		<State>
+			<Number>1</Number>
+			<Pressed>btn_pfl_over.png</Pressed>
+			<Unpressed>btn_pfl1_over.png</Unpressed>
+		</State>
+		<Pos>524,430</Pos>
+		<Connection>
+			<ConfigKey>[Channel1],pfl</ConfigKey>
+		</Connection>
+	</PushButton>
+	<PushButton>
+		<Tooltip>Headphone prelisten for Channel 2</Tooltip>
+		<NumberStates>2</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_pfl.png</Pressed>
+			<Unpressed>btn_pfl.png</Unpressed>
+		</State>
+		<State>
+			<Number>1</Number>
+			<Pressed>btn_pfl_over.png</Pressed>
+			<Unpressed>btn_pfl2_over.png</Unpressed>
+		</State>
+		<Pos>714,430</Pos>
+		<Connection>
+			<ConfigKey>[Channel2],pfl</ConfigKey>
+		</Connection>
+	</PushButton>>
+
+	<!--
+	**********************************************
+	Button- End of track mode
+	**********************************************
+	-->
+	<PushButton>
+		<Tooltip>End of track mode control</Tooltip>
+		<NumberStates>3</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_trackmode_stop.png</Pressed>
+			<Unpressed>btn_trackmode_stop.png</Unpressed>
+		</State>
+		<State>
+			<Number>1</Number>
+			<Pressed>btn_trackmode_next.png</Pressed>
+			<Unpressed>btn_trackmode_next.png</Unpressed>
+		</State>
+		<State>
+			<Number>2</Number>
+			<Pressed>btn_trackmode_loop.png</Pressed>
+			<Unpressed>btn_trackmode_loop.png</Unpressed>
+		</State>
+		<Pos>460,208</Pos>
+		<Connection>
+			<ConfigKey>[Channel1],TrackEndMode</ConfigKey>
+		</Connection>
+	</PushButton>
+	<PushButton>
+		<Tooltip>End of track mode control</Tooltip>
+		<NumberStates>3</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_trackmode_stop.png</Pressed>
+			<Unpressed>btn_trackmode_stop.png</Unpressed>
+		</State>
+		<State>
+			<Number>1</Number>
+			<Pressed>btn_trackmode_next.png</Pressed>
+			<Unpressed>btn_trackmode_next.png</Unpressed>
+		</State>
+		<State>
+			<Number>2</Number>
+			<Pressed>btn_trackmode_loop.png</Pressed>
+			<Unpressed>btn_trackmode_loop.png</Unpressed>
+		</State>
+		<Pos>1230,208</Pos>
+		<Connection>
+			<ConfigKey>[Channel2],TrackEndMode</ConfigKey>
+		</Connection>
+	</PushButton>
+
+	<!--
+	**********************************************
+	Button- Flanger (FX)
+	**********************************************
+	-->
+	<PushButton>
+		<Tooltip>Apply flanger effect</Tooltip>
+		<NumberStates>2</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_fx.png</Pressed>
+			<Unpressed>btn_fx.png</Unpressed>
+		</State>
+		<State>
+			<Number>1</Number>
+			<Pressed>btn_fx1_over.png</Pressed>
+			<Unpressed>btn_fx1_over.png</Unpressed>
+		</State>
+		<Pos>80,434</Pos>
+		<Connection>
+			<ConfigKey>[Channel1],flanger</ConfigKey>
+		</Connection>
+	</PushButton>
+	<PushButton>
+		<Tooltip>Apply flanger effect</Tooltip>
+		<NumberStates>2</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_fx.png</Pressed>
+			<Unpressed>btn_fx.png</Unpressed>
+		</State>
+		<State>
+			<Number>1</Number>
+			<Pressed>btn_fx2_over.png</Pressed>
+			<Unpressed>btn_fx2_over.png</Unpressed>
+		</State>
+		<Pos>1140,434</Pos>
+		<Connection>
+			<ConfigKey>[Channel2],flanger</ConfigKey>
+		</Connection>
+	</PushButton>
+
+	<!--
+	**********************************************
+	Button- Frequency Kill
+	**********************************************
+	-->
+	<PushButton>
+		<Tooltip>Temporary treble kill</Tooltip>
+		<NumberStates>2</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_kill_over.png</Pressed>
+			<Unpressed>btn_kill.png</Unpressed>
+		</State>
+		<State>
+			<Number>1</Number>
+			<Pressed>btn_kill.png</Pressed>
+			<Unpressed>btn_kill_over.png</Unpressed>
+		</State>
+		<Pos>566,286</Pos>
+		<Connection>
+			<ConfigKey>[Channel1],filterHighKill</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+	</PushButton>
+	<PushButton>
+		<Tooltip>Temporary mid kill</Tooltip>
+		<NumberStates>2</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_kill_over.png</Pressed>
+			<Unpressed>btn_kill.png</Unpressed>
+		</State>
+		<State>
+			<Number>1</Number>
+			<Pressed>btn_kill.png</Pressed>
+			<Unpressed>btn_kill_over.png</Unpressed>
+		</State>
+		<Pos>566,342</Pos>
+		<Connection>
+			<ConfigKey>[Channel1],filterMidKill</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+	</PushButton>
+	<PushButton>
+		<Tooltip>Temporary bass kill</Tooltip>
+		<NumberStates>2</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_kill_over.png</Pressed>
+			<Unpressed>btn_kill.png</Unpressed>
+		</State>
+		<State>
+			<Number>1</Number>
+			<Pressed>btn_kill.png</Pressed>
+			<Unpressed>btn_kill_over.png</Unpressed>
+		</State>
+		<Pos>566,394</Pos>
+		<Connection>
+			<ConfigKey>[Channel1],filterLowKill</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+	</PushButton>
+
+	<PushButton>
+		<Tooltip>Temporary treble kill</Tooltip>
+		<NumberStates>2</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_kill_over.png</Pressed>
+			<Unpressed>btn_kill.png</Unpressed>
+		</State>
+		<State>
+			<Number>1</Number>
+			<Pressed>btn_kill.png</Pressed>
+			<Unpressed>btn_kill_over.png</Unpressed>
+		</State>
+		<Pos>706,286</Pos>
+		<Connection>
+			<ConfigKey>[Channel2],filterHighKill</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+	</PushButton>
+	<PushButton>
+		<Tooltip>Temporary mid kill</Tooltip>
+		<NumberStates>2</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_kill_over.png</Pressed>
+			<Unpressed>btn_kill.png</Unpressed>
+		</State>
+		<State>
+			<Number>1</Number>
+			<Pressed>btn_kill.png</Pressed>
+			<Unpressed>btn_kill_over.png</Unpressed>
+		</State>
+		<Pos>706,342</Pos>
+		<Connection>
+			<ConfigKey>[Channel2],filterMidKill</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+	</PushButton>
+	<PushButton>
+		<Tooltip>Temporary bass kill</Tooltip>
+		<NumberStates>2</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_kill_over.png</Pressed>
+			<Unpressed>btn_kill.png</Unpressed>
+		</State>
+		<State>
+			<Number>1</Number>
+			<Pressed>btn_kill.png</Pressed>
+			<Unpressed>btn_kill_over.png</Unpressed>
+		</State>
+		<Pos>706,394</Pos>
+		<Connection>
+			<ConfigKey>[Channel2],filterLowKill</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+	</PushButton>
+
+	<!--
+	**********************************************
+	Loop buttons
+	**********************************************
+	-->
+	<PushButton>
+		<Tooltip>Loop-In [Channel1]</Tooltip>
+		<NumberStates>1</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_loop_in1_over.png</Pressed>
+			<Unpressed>btn_loop_in.png</Unpressed>
+		</State>
+		<Pos>20,330</Pos>
+		<Connection>
+			<ConfigKey>[Channel1],loop_in</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+		<Connection>
+			<ConfigKey>[Channel1],loop_in</ConfigKey>
+			<EmitOnDownPress>false</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+	</PushButton>
+	<PushButton>
+		<Tooltip>Loop-Out Channel1]</Tooltip>
+		<NumberStates>1</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_loop_out1_over.png</Pressed>
+			<Unpressed>btn_loop_out.png</Unpressed>
+		</State>
+		<Pos>80,330</Pos>
+		<Connection>
+			<ConfigKey>[Channel1],loop_out</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+		<Connection>
+			<ConfigKey>[Channel1],loop_out</ConfigKey>
+			<EmitOnDownPress>false</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+	</PushButton>
+	<PushButton>
+		<Tooltip>Reloop/Exit</Tooltip>
+		<NumberStates>1</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_loop_reloop1_over.png</Pressed>
+			<Unpressed>btn_loop_reloop.png</Unpressed>
+		</State>
+		<Pos>140,330</Pos>
+		<Connection>
+			<ConfigKey>[Channel1],reloop_exit</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+		<Connection>
+			<ConfigKey>[Channel1],reloop_exit</ConfigKey>
+			<EmitOnDownPress>false</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+	</PushButton>
+
+	<PushButton>
+		<Tooltip>Loop-In</Tooltip>
+		<NumberStates>1</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_loop_in2_over.png</Pressed>
+			<Unpressed>btn_loop_in.png</Unpressed>
+		</State>
+		<Pos>1090,330</Pos>
+		<Connection>
+			<ConfigKey>[Channel2],loop_in</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+		<Connection>
+			<ConfigKey>[Channel2],loop_in</ConfigKey>
+			<EmitOnDownPress>false</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+	</PushButton>
+	<PushButton>
+		<Tooltip>Loop-Out</Tooltip>
+		<NumberStates>1</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_loop_out2_over.png</Pressed>
+			<Unpressed>btn_loop_out.png</Unpressed>
+		</State>
+		<Pos>1150,330</Pos>
+		<Connection>
+			<ConfigKey>[Channel2],loop_out</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+		<Connection>
+			<ConfigKey>[Channel2],loop_out</ConfigKey>
+			<EmitOnDownPress>false</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+	</PushButton>
+	<PushButton>
+		<Tooltip>Reloop/Exit</Tooltip>
+		<NumberStates>1</NumberStates>
+		<State>
+			<Number>0</Number>
+			<Pressed>btn_loop_reloop2_over.png</Pressed>
+			<Unpressed>btn_loop_reloop.png</Unpressed>
+		</State>
+		<Pos>1210,330</Pos>
+		<Connection>
+			<ConfigKey>[Channel2],reloop_exit</ConfigKey>
+			<EmitOnDownPress>true</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+		<Connection>
+			<ConfigKey>[Channel2],reloop_exit</ConfigKey>
+			<EmitOnDownPress>false</EmitOnDownPress>
+			<ButtonState>LeftButton</ButtonState>
+		</Connection>
+	</PushButton>
+
+
+	<!--
+	############################################################################################
+	############################################################################################
+	Section: RotaryFader
+	############################################################################################
+	############################################################################################
+	-->
+
+	<!--
+	**********************************************
+	RotaryFader- Master volume & balance
+	**********************************************
+	-->
+	<Knob>
+		<Tooltip>Master volume control</Tooltip>
+		<NumberStates>29</NumberStates>
+		<Path>knob_rotate_%1.png</Path>
+		<Pos>594,174</Pos>
+		<Connection>
+			<ConfigKey>[Master],volume</ConfigKey>
+		</Connection>
+	</Knob>
+	<Knob>
+		<Tooltip>Master balance control</Tooltip>
+		<NumberStates>29</NumberStates>
+		<Path>knob_rotate_%1.png</Path>
+		<Pos>656,174</Pos>
+		<Connection>
+			<ConfigKey>[Master],balance</ConfigKey>
+		</Connection>
+	</Knob>
+
+	<!--
+	**********************************************
+	RotaryFader- Flanger (FX) setting 1
+	there are fx settings for both side, looking forward for LADSPA FX ;)
+	**********************************************
+	-->
+	<Knob>
+		<Tooltip>Flanger delay control</Tooltip>
+		<NumberStates>29</NumberStates>
+		<Path>knob_rotate_%1.png</Path>
+		<Pos>150,508</Pos>
+		<Connection>
+			<ConfigKey>[Flanger],lfoDelay</ConfigKey>
+		</Connection>
+	</Knob>
+	<Knob>
+		<Tooltip>Flanger depth control</Tooltip>
+		<NumberStates>29</NumberStates>
+		<Path>knob_rotate_%1.png</Path>
+		<Pos>88,508</Pos>
+		<Connection>
+			<ConfigKey>[Flanger],lfoDepth</ConfigKey>
+		</Connection>
+	</Knob>
+	<Knob>
+		<Tooltip>Flanger period control</Tooltip>
+		<NumberStates>29</NumberStates>
+		<Path>knob_rotate_%1.png</Path>
+		<Pos>25,508</Pos>
+		<Connection>
+			<ConfigKey>[Flanger],lfoPeriod</ConfigKey>
+		</Connection>
+	</Knob>
+
+	<!--
+	**********************************************
+	RotaryFader- Flanger (FX) setting 2
+	**********************************************
+	-->
+	<Knob>
+		<Tooltip>Flanger delay control</Tooltip>
+		<NumberStates>29</NumberStates>
+		<Path>knob_rotate_%1.png</Path>
+		<Pos>1216,508</Pos>
+		<Connection>
+			<ConfigKey>[Flanger],lfoDelay</ConfigKey>
+		</Connection>
+	</Knob>
+	<Knob>
+		<Tooltip>Flanger depth control</Tooltip>
+		<NumberStates>29</NumberStates>
+		<Path>knob_rotate_%1.png</Path>
+		<Pos>1150,508</Pos>
+		<Connection>
+			<ConfigKey>[Flanger],lfoDepth</ConfigKey>
+		</Connection>
+	</Knob>
+	<Knob>
+		<Tooltip>Flanger period control</Tooltip>
+		<NumberStates>29</NumberStates>
+		<Path>knob_rotate_%1.png</Path>
+		<Pos>1090,508</Pos>
+		<Connection>
+			<ConfigKey>[Flanger],lfoPeriod</ConfigKey>
+		</Connection>
+	</Knob>
+
+	<!--
+	**********************************************
+	RotaryFader- Headphone volume and mix
+	**********************************************
+	-->
+	<Knob>
+		<Tooltip>Headphone volume control</Tooltip>
+		<NumberStates>29</NumberStates>
+		<Path>knob_rotate_%1.png</Path>
+		<Pos>656,236</Pos>
+		<Connection>
+			<ConfigKey>[Master],headVolume</ConfigKey>
+		</Connection>
+	</Knob>
+	<Knob>
+		<Tooltip>Headphone mix control</Tooltip>
+		<NumberStates>29</NumberStates>
+		<Path>knob_rotate_%1.png</Path>
+		<Pos>594,236</Pos>
+		<Connection>
+			<ConfigKey>[Master],headMix</ConfigKey>
+		</Connection>
+	</Knob>
+
+	<!--
+	**********************************************
+	RotaryFader- Channel filter and gain
+	**********************************************
+	-->
+	<Knob>
+		<Tooltip>Gain control</Tooltip>
+		<NumberStates>29</NumberStates>
+		<Path>knob_rotate_%1.png</Path>
+		<Pos>540,174</Pos>
+		<Connection>
+			<ConfigKey>[Channel1],pregain</ConfigKey>
+		</Connection>
+	</Knob>
+	<Knob>
+		<Tooltip>Treble filter control</Tooltip>
+		<NumberStates>29</NumberStates>
+		<Path>knob_rotate_%1.png</Path>
+		<Pos>540,256</Pos>
+		<Connection>
+			<ConfigKey>[Channel1],filterHigh</ConfigKey>
+		</Connection>
+	</Knob>
+	<Knob>
+		<Tooltip>Mid filter control</Tooltip>
+		<NumberStates>29</NumberStates>
+		<Path>knob_rotate_%1.png</Path>
+		<Pos>540,312</Pos>
+		<Connection>
+			<ConfigKey>[Channel1],filterMid</ConfigKey>
+		</Connection>
+	</Knob>
+	<Knob>
+		<Tooltip>Bass filter control</Tooltip>
+		<NumberStates>29</NumberStates>
+		<Path>knob_rotate_%1.png</Path>
+		<Pos>540,364</Pos>
+		<Connection>
+			<ConfigKey>[Channel1],filterLow</ConfigKey>
+		</Connection>
+	</Knob>
+
+	<Knob>
+		<Tooltip>Gain control</Tooltip>
+		<NumberStates>29</NumberStates>
+		<Path>knob_rotate_%1.png</Path>
+		<Pos>709,174</Pos>
+		<Connection>
+			<ConfigKey>[Channel2],pregain</ConfigKey>
+		</Connection>
+	</Knob>
+	<Knob>
+		<Tooltip>Treble filter control</Tooltip>
+		<NumberStates>29</NumberStates>
+		<Path>knob_rotate_%1.png</Path>
+		<Pos>709,256</Pos>
+		<Connection>
+			<ConfigKey>[Channel2],filterHigh</ConfigKey>
+		</Connection>
+	</Knob>
+	<Knob>
+		<Tooltip>Mid filter control</Tooltip>
+		<NumberStates>29</NumberStates>
+		<Path>knob_rotate_%1.png</Path>
+		<Pos>709,312</Pos>
+		<Connection>
+			<ConfigKey>[Channel2],filterMid</ConfigKey>
+		</Connection>
+	</Knob>
+	<Knob>
+		<Tooltip>Bass filter control</Tooltip>
+		<NumberStates>29</NumberStates>
+		<Path>knob_rotate_%1.png</Path>
+		<Pos>709,364</Pos>
+		<Connection>
+			<ConfigKey>[Channel2],filterLow</ConfigKey>
+		</Connection>
+	</Knob>
+
+</skin>
